@@ -139,7 +139,9 @@ $all-font-family: Microsoft JhengHei;
   %basic-font {
     font-weight: bolder;
   }
-
+h1{
+  font-size: 40px;
+}
   main{
     width: 100%;
     height: 6553px;
@@ -181,7 +183,7 @@ $all-font-family: Microsoft JhengHei;
   }
    //stage1
   .stage1{
-    width: 100%; height: 834px; background-color: rgba(240,240,240,0.2); display: flex; position: relative;
+    width: 100%; height: 834px; display: flex; position: relative;
     .bugger{width: 636px; height: 542px; background: url(../images/stage1/bugger.png)no-repeat; background-size: cover; @extend %stage1-bugger; bottom: 17%; z-index: 2;}
     .bugger-s{width: 633px; height: 177px; background: url(../images/stage1/bugger-s.png)no-repeat; background-size: cover; @extend %stage1-bugger; bottom: 13%;  z-index: 1;}
     .text1, .text2, .text3, .text4, .text5
@@ -205,10 +207,84 @@ $all-font-family: Microsoft JhengHei;
   .stage2{
     @extend %flex-direction-column; margin-top: 60px; width: 100%; height: 1150px; align-items: center; justify-content: space-between; position: relative;
     .title{margin-bottom: 100px; width: 416px; height: 74px; background: url(../images/stage2/title.png)no-repeat;}
-    .box{@extend %flex-direction-row; justify-content: space-between; width: 85%; height: 975px; background-color: rgba(0,100,100,0.5);
-      .content{}
+    .box{@extend %flex-direction-row; justify-content: space-between; align-items: center; width: 1032px; height: 975px; 
+      .content{width: 788px; height: 975px;  position: relative;
+        .p1,.p2,.p3{position: relative; cursor: pointer;}
+        .p1{width: 788px; height: 975px;background: url(../images/stage2/content.png)no-repeat;}
+        .p2{width: 788px; height: 975px;background: url(../images/stage2/content.png)no-repeat;}
+        .p3{width: 788px; height: 975px;background: url(../images/stage2/content.png)no-repeat;}
+      }//content
+      .left-arrow,.right-arrow{background: url(../images/stage2/arrows.png)no-repeat; width: 80px; height: 80px; cursor: pointer;}
+      .left-arrow{background-position: 0 0;}
+      .right-arrow{background-position: -80px 0;}
     }//box
-  }
+  }//.stage2
+
+  .stage3{
+    @extend %flex-direction-column; margin-top: 150px; width: 100%; height: 1290px; align-items: center; justify-content: space-between; position: relative;
+    .title{ width: 416px; height: 74px; background: url(../images/stage3/title.png)no-repeat;}
+    .box{@extend %flex-direction-row; justify-content: space-between; align-items: center; width: 682px; height: 512px;  position: relative;
+      .content{width: 100%; height: 100%;  position: relative;
+        .p1,.p2,.p3{position: relative; cursor: pointer;}
+        .p1{width: 682px; height: 512px;background: url(../images/stage3/content.png)no-repeat;}
+        .p2{width: 682px; height: 512px;background: url(../images/stage3/content.png)no-repeat;}
+        .p3{width: 682px; height: 512px;background: url(../images/stage3/content.png)no-repeat;}
+      }//content
+      .left-arrow,.right-arrow{ width: 40px; height: 60px; cursor: pointer;position: absolute; z-index: 1; background-color: white; opacity: 0.5; transition: all transform 0.3s ease-in-out;
+        span{background-color: black; width: 16px; height: 5px; display: flex; position: absolute;}
+      }//left,right
+      .left-arrow{left: 0;border-radius: 0px 50px 50px 0;
+        span{left: 10px;border-radius: 100px 0 0 100px;}
+        span:nth-child(1){transform: rotate(-45deg) skew(-45deg);top: 22px;}
+        span:nth-child(2){transform: rotate(45deg) skew(45deg);top: 33px;}
+      }//left
+      .right-arrow{right: 0;border-radius: 50px 0 0 50px;
+        span{left: 14px;border-radius: 0px 100px 100px 0px;}
+        span:nth-child(1){transform: rotate(45deg) skew(45deg);top: 22px;}
+        span:nth-child(2){transform: rotate(-45deg) skew(-45deg);top: 33px;}
+      }//right
+
+      .left-arrow:hover,.right-arrow:hover{opacity:1;}
+      .left-arrow:active,.right-arrow:active{transform:scale(0.9);}
+    }//box
+    .about-us{width: 682px;}
+    h1,p{}
+    h1{ font-family: $all-font-family; margin-bottom: 40px;}
+    p{font-size: 21px; line-height: 28px;white-space: pre-line; margin-bottom: 30px;}
+    p:last-child{margin: 0;}
+    br{height: 30px;}
+  }//.stage3
+
+  .stage4{@extend %flex-direction-column; margin-top: 150px; height: 784px; justify-content: space-between; align-items: center; 
+    .title{ width: 416px; height: 74px; background: url(../images/stage4/title.png)no-repeat; margin-bottom: 100px;}
+    .box{@extend %flex-direction-column; justify-content: space-between; align-items: center; height: 610px;
+      .subtitle,.content{@extend %flex-direction-column; justify-content: space-between; text-align: center;}
+      .subtitle{ height: 80px; }
+      .content{height: 144px; }
+      .map{width: 457px; height: 311px; background: url(../images/stage4/map.png)no-repeat;}
+      a{color: black; text-decoration:underline;}
+    }//box
+    p{font-size: 21px; line-height: 28px;}
+  }//stage4
+
+  .stage5{@extend %flex-direction-column; margin-top: 150px; width: 100%; height: 1527px; justify-content: space-between; align-items: center;
+    .title{ width: 416px; height: 74px; background: url(../images/stage5/title.png)no-repeat; margin-bottom: 115px;}
+    .box{@extend %flex-direction-row; justify-content: space-between; align-content: space-between; flex-wrap: wrap; width: 660px; height: 1343px; 
+     .item{@extend %flex-direction-column ; width: 252px; height: 420px; align-items: center; justify-content: flex-start; }
+     .item:nth-child(1){
+       .img{width: 252px; height: 158px; background: url(../images/stage5/item1.png)no-repeat; margin: 35px 0 60px 0;}
+      
+      }//item1
+      .item:nth-child(2) .img,.item:nth-child(3) .img,.item:nth-child(4) .img,.item:nth-child(5) .img,.item:nth-child(6) .img{width: 200px; height: 200px; margin-bottom: 50px;}
+      .item:nth-child(2){.img{background: url(../images/stage5/item2.png)no-repeat;}}//item1
+      .item:nth-child(3){.img{background: url(../images/stage5/item3.png)no-repeat;}}//item1
+      .item:nth-child(4){.img{background: url(../images/stage5/item4.png)no-repeat;}}//item1
+      .item:nth-child(5){.img{background: url(../images/stage5/item5.png)no-repeat;}}//item1
+      .item:nth-child(6){.img{background: url(../images/stage5/item6.png)no-repeat;}}//item1
+    }//box
+    p{font-size: 21px; line-height: 28px;}
+  }//stage5
+
 
    .footer{
      position: absolute;

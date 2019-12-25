@@ -2,20 +2,20 @@ $(document).ready(function(){
 
     console.log("hello This is {slider.js}");
 
-    $('.bottom-box-content-box ul').slick({
-        autoplay:true,
+    $('.stage2 .box .content').slick({
+        autoplay:false,
         autoplaySpeed: 2000,
         infinite: true,
         speed: 300,
         slidesToShow: 1,
         slidesToScroll: 1,
         variableWidth: true,
-        prevArrow: $('.bottom-box-content .left-arrow'),
-        nextArrow: $('.bottom-box-content .right-arrow')
+        prevArrow: $('.stage2 .box .left-arrow'),
+        nextArrow: $('.stage2 .box .right-arrow')
     
     });
 
-    $('.image-box-content').slick({
+    $('.stage3 .box .content').slick({
         autoplay:true,
         autoplaySpeed: 2000,
         infinite: true,
@@ -23,8 +23,8 @@ $(document).ready(function(){
         slidesToScroll: 1,
         variableWidth: true,
         speed: 300,
-        prevArrow: $('.box-group .left-arrow'),
-        nextArrow: $('.box-group .right-arrow')
+        prevArrow: $('.stage3 .box .left-arrow'),
+        nextArrow: $('.stage3 .box .right-arrow')
     });
 
     // let slideCount = $('.bottom-box-content-box ul li').length;
