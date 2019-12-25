@@ -68,6 +68,10 @@ $all-font-family: Microsoft JhengHei;
     width: 100%;
     height: 6553px;
 }
+%before{
+  content:"";
+  position: absolute;
+}
   * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -75,7 +79,8 @@ $all-font-family: Microsoft JhengHei;
   }
 
   a{
-    text-decoration:none
+    text-decoration:none;
+    cursor: pointer;
   }
   
   html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -158,12 +163,12 @@ $all-font-family: Microsoft JhengHei;
     ul{@extend %flex-direction-row; width: 90%; height: 100%; justify-content: space-between; align-items: center;}
     .logo{background: url(../images/logo.png)no-repeat; background-size: cover; width: 142px; height: 141px; z-index: 7;}
     // .icon{@include basic-bg(../images/icon.png);}
-    p{@extend %basic-font; font-size: $title-font-size;z-index: 7;}
+    li{@extend %basic-font; font-size: $title-font-size;z-index: 7; cursor: pointer;}
 
   }
   .container {
   @extend %container-set;  position: relative;  -webkit-box-sizing: border-box; box-sizing: border-box;@extend %flex-direction-column; flex-wrap: wrap;
-    margin-top: 161px; justify-content: space-between;
+    margin-top: 161px; justify-content: flex-start;
    } //container
 
   %stage1-bugger{
@@ -171,12 +176,39 @@ $all-font-family: Microsoft JhengHei;
     left: 50%;
     transform: translateX(-50%);
   }
+  %stage1-text{
+    position: absolute;
+  }
    //stage1
   .stage1{
     width: 100%; height: 834px; background-color: rgba(240,240,240,0.2); display: flex; position: relative;
     .bugger{width: 636px; height: 542px; background: url(../images/stage1/bugger.png)no-repeat; background-size: cover; @extend %stage1-bugger; bottom: 17%; z-index: 2;}
-    .bugger-s{width: 633px; height: 177px; background: url(../images/stage1/bugger-s.png)no-repeat; background-size: cover; @extend %stage1-bugger; bottom: 4%;  z-index: 1;}
+    .bugger-s{width: 633px; height: 177px; background: url(../images/stage1/bugger-s.png)no-repeat; background-size: cover; @extend %stage1-bugger; bottom: 13%;  z-index: 1;}
+    .text1, .text2, .text3, .text4, .text5
+    {@extend %stage1-text;}
+    .text1{width: 298px; height: 156px; background: url(../images/stage1/text1.png)no-repeat; top: -18%; left: -39%; }
+    .text2{width: 90px; height: 21px; background: url(../images/stage1/atext1.png)no-repeat; top: 17%; left: -28%; overflow: visible;}
+    .text2:after{@extend %before; width: 114px; height: 43px; top: 32px; left: 72px; background: url(../images/stage1/arrow1.png)no-repeat;}
+    .text3{width: 221px; height: 23px; background: url(../images/stage1/atext2.png)no-repeat; top: 5%; right:-29%; overflow: visible;}
+    .text3:after{@extend %before; width: 112px; height: 43px; top: 42px; left: -36px; background: url(../images/stage1/arrow2.png)no-repeat;}
+    .text3:before{@extend %before; width: 48px; height: 53px; top: -55px; right: -30px; background: url(../images/stage1/atext2-ef.png)no-repeat;}
+    .text4{width: 178px; height: 24px; background: url(../images/stage1/atext3.png)no-repeat; bottom: 47%; left:-38%; overflow: visible;}
+    .text4:after{@extend %before; width: 118px; height: 38px; top: 17px; left: 151px; background: url(../images/stage1/arrow3.png)no-repeat;}
+    .text4:before{@extend %before; width: 39px; height: 37px; top: -22px; left:-40px ; background: url(../images/stage1/atext3-ef.png)no-repeat;}
+    .text5{width: 109px; height: 24px; background: url(../images/stage1/atext4.png)no-repeat; top: 50%; right: -20%; overflow: visible;}
+    .text5:after{@extend %before; width: 112px; height: 43px; top: 16px; left: -83px; transform: rotate(28deg); background: url(../images/stage1/arrow2.png)no-repeat;}
+    .text1, .text2, .text3, .text4, .text5
+    {background-size: cover;}
+    
   }//stage1
+
+  .stage2{
+    @extend %flex-direction-column; margin-top: 60px; width: 100%; height: 1150px; align-items: center; justify-content: space-between; position: relative;
+    .title{margin-bottom: 100px; width: 416px; height: 74px; background: url(../images/stage2/title.png)no-repeat;}
+    .box{@extend %flex-direction-row; justify-content: space-between; width: 85%; height: 975px; background-color: rgba(0,100,100,0.5);
+      .content{}
+    }//box
+  }
 
    .footer{
      position: absolute;
