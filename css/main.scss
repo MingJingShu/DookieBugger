@@ -152,7 +152,7 @@ h1{
 
 
   .header{ z-index: 5;
-    max-width: 1200px; width: 100%; height: 100px; position: fixed; top: 20px;  @extend %flex-direction-row; justify-content: center;
+    max-width: 1200px; width: 100%; height: 100px; position: fixed; top: 20px; left: 350px; @extend %flex-direction-row; justify-content: center;
     .box{ @extend %flex-direction-row; width: 83%; justify-content: center; align-items: center; height: 141px; position: relative; overflow: visible;
       & .title-bg{ overflow: visible;
         width: 0; height: 0; border-style: solid; border-width: 0 26px 26px 0; border-color: transparent #987e62 transparent transparent; position: absolute; left: 0;bottom: 8.6px;}
@@ -161,7 +161,7 @@ h1{
           width: 0; height: 0; border-style: solid; border-width: 26px 26px 0 0; border-color: #987e62 transparent transparent transparent; position: absolute; right:0; bottom: 8.6px;}
       & .title-bg2:after{content:""; width: 107px; height: 72px; position: absolute; right:-107px; top:-60px; background: url(../images/title-bg.png)no-repeat; z-index: -1; transform: rotateY(180deg);}
     }//.box
-    .box:after{content:""; width: 100%; height: 50%;  position: absolute; top: 35px; background: url(../images/title.png)no-repeat; background-size: cover;}
+    .box:after{content:""; width: 100%; height: 50%;  position: absolute; top: 35px; left: 0; background: url(../images/title.png)no-repeat; background-size: cover;}
     ul{@extend %flex-direction-row; width: 90%; height: 100%; justify-content: space-between; align-items: center;}
     .logo{background: url(../images/logo.png)no-repeat; background-size: cover; width: 142px; height: 141px; z-index: 7;}
     // .icon{@include basic-bg(../images/icon.png);}
@@ -293,7 +293,7 @@ h1{
    }
    /*just BG*/
 
-   .BG{@extend %container-set; z-index: -999; background: url(../images/BG.jpg)no-repeat; background-size: cover; background-position:center center; position: absolute;}
+   .BG{@extend %container-set; z-index: -999; background: url(../images/BG.jpg)no-repeat; background-size: cover; background-position:center center; position: absolute; left: 0; top: -161px;}
 
   @media screen and (max-width:320px){
     .container{max-width: 320px;}

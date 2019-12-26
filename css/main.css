@@ -564,6 +564,7 @@ main {
   height: 100px;
   position: fixed;
   top: 20px;
+  left: 350px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
@@ -623,6 +624,7 @@ main {
     height: 50%;
     position: absolute;
     top: 35px;
+    left: 0;
     background: url(../images/title.png) no-repeat;
     background-size: cover; }
   .header ul {
@@ -1043,7 +1045,9 @@ main {
   background: url(../images/BG.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
-  position: absolute; }
+  position: absolute;
+  left: 0;
+  top: -161px; }
 
 @media screen and (max-width: 320px) {
   .container {
