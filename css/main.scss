@@ -152,7 +152,7 @@ h1{
 
 
   .header{ z-index: 5;
-    max-width: 1200px; width: 100%; height: 100px; position: fixed; top: 20px; left: 350px; @extend %flex-direction-row; justify-content: center;
+    max-width: 1200px; width: 100%; height: 100px; position: fixed; top: 20px; left: 50%; transform:translate(-50%,0%); @extend %flex-direction-row; justify-content: center;
     .box{ @extend %flex-direction-row; width: 83%; justify-content: center; align-items: center; height: 141px; position: relative; overflow: visible;
       & .title-bg{ overflow: visible;
         width: 0; height: 0; border-style: solid; border-width: 0 26px 26px 0; border-color: transparent #987e62 transparent transparent; position: absolute; left: 0;bottom: 8.6px;}
@@ -173,6 +173,23 @@ h1{
     margin-top: 161px; justify-content: flex-start;
    } //container
 
+   .L-start{background-color: #007196; transform: scale(1.2);}
+
+   nav{position: fixed; max-width: 1281px; top: 400px; left: 50%; transform: translateX(-50%); width: 100%; height: 160px; 
+       z-index: 5;
+      .left-point,.right-link{position: absolute; @extend %flex-direction-column;}
+      .left-point{justify-content: space-around; align-items: center; width: 16px; height: 100%; left: 20px; 
+        .L1,.L2,.L3,.L4,.L5{background-color: none; width: 12px; height: 12px; border-radius: 100px;  border: 1px solid white; cursor: pointer;
+         box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.5); transition: all 0.3s ease-in-out;}//L1~L5
+         .L1:active,.L2:active,.L3:active,.L4:active,.L5:active{transform: scale(0.9);}
+      }//left
+      .right-link{justify-content: space-between; align-items: center; width: 100px; height: 100%; right: 0px; 
+       .fb,.ig{width: 100%; height: 70px; background-color: #fff; background: url(../images/right-link.png); cursor: pointer;}
+       .ig{background-position: 0 -70px;}
+      }//right
+    }//nav
+
+
   %stage1-bugger{
     position: absolute;
     left: 50%;
@@ -184,21 +201,45 @@ h1{
    //stage1
   .stage1{
     width: 100%; height: 834px; display: flex; position: relative;
-    .bugger{width: 636px; height: 542px; background: url(../images/stage1/bugger.png)no-repeat; background-size: cover; @extend %stage1-bugger; bottom: 17%; z-index: 2;}
-    .bugger-s{width: 633px; height: 177px; background: url(../images/stage1/bugger-s.png)no-repeat; background-size: cover; @extend %stage1-bugger; bottom: 13%;  z-index: 1;}
+    .bugger{width: 636px; height: 542px; background: url(../images/stage1/bugger.png)no-repeat; background-size: cover; @extend %stage1-bugger; transform: translateX(0%); bottom: 17%; top: -85%; z-index: 2;
+      animation: stage1-bu 2s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards;
+    }//bugger
+    .bugger-s{width: 633px; height: 177px; background: url(../images/stage1/bugger-s.png)no-repeat; background-size: cover; @extend %stage1-bugger; bottom: 13%;  z-index: 1;
+      animation: stage1-sh 1.6s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards;  
+    }//bugger-s
     .text1, .text2, .text3, .text4, .text5
-    {@extend %stage1-text;}
-    .text1{width: 298px; height: 156px; background: url(../images/stage1/text1.png)no-repeat; top: -18%; left: -39%; }
-    .text2{width: 90px; height: 21px; background: url(../images/stage1/atext1.png)no-repeat; top: 17%; left: -28%; overflow: visible;}
-    .text2:after{@extend %before; width: 114px; height: 43px; top: 32px; left: 72px; background: url(../images/stage1/arrow1.png)no-repeat;}
-    .text3{width: 221px; height: 23px; background: url(../images/stage1/atext2.png)no-repeat; top: 5%; right:-29%; overflow: visible;}
-    .text3:after{@extend %before; width: 112px; height: 43px; top: 42px; left: -36px; background: url(../images/stage1/arrow2.png)no-repeat;}
-    .text3:before{@extend %before; width: 48px; height: 53px; top: -55px; right: -30px; background: url(../images/stage1/atext2-ef.png)no-repeat;}
-    .text4{width: 178px; height: 24px; background: url(../images/stage1/atext3.png)no-repeat; bottom: 47%; left:-38%; overflow: visible;}
-    .text4:after{@extend %before; width: 118px; height: 38px; top: 17px; left: 151px; background: url(../images/stage1/arrow3.png)no-repeat;}
-    .text4:before{@extend %before; width: 39px; height: 37px; top: -22px; left:-40px ; background: url(../images/stage1/atext3-ef.png)no-repeat;}
-    .text5{width: 109px; height: 24px; background: url(../images/stage1/atext4.png)no-repeat; top: 50%; right: -20%; overflow: visible;}
-    .text5:after{@extend %before; width: 112px; height: 43px; top: 16px; left: -83px; transform: rotate(28deg); background: url(../images/stage1/arrow2.png)no-repeat;}
+    {@extend %stage1-text; opacity: 0;}
+    .text1{width: 298px; height: 156px; background: url(../images/stage1/text1.png)no-repeat; top: -18%; left: -39%; 
+      animation: text1 1s 2s 1 ease-in-out forwards;}//text1
+
+    .text2{width: 90px; height: 21px; background: url(../images/stage1/atext1.png)no-repeat; top: 17%; left: -28%; overflow: visible;
+      animation: text1 1s 2.4s 1 ease-in-out forwards;}//text2
+    .text2:after{@extend %before; width: 114px; height: 43px; top: 32px; left: 72px; background: url(../images/stage1/arrow1.png)no-repeat;
+      transform: translate(-20px, -8px); 
+      animation: text2-af 0.4s 2.6s 1 ease-in-out forwards;}//text2-af
+
+    .text3{width: 221px; height: 23px; background: url(../images/stage1/atext2.png)no-repeat; top: 5%; right:-29%; overflow: visible;
+      animation: text1 1s 2.8s 1 ease-in-out forwards;}//text3
+    .text3:after{@extend %before; width: 112px; height: 43px; top: 42px; left: -36px; background: url(../images/stage1/arrow2.png)no-repeat;
+      animation: text3-af 0.4s 3s 1 ease-in-out forwards;}//text3-af
+    .text3:before{@extend %before; width: 48px; height: 53px; top: -55px; right: -30px; background: url(../images/stage1/atext2-ef.png)no-repeat;
+      transform: translate(-20px, 10px) scale(0.8) rotate(-45deg);
+      animation: text3-be 0.4s 3.1s 1 ease-in-out forwards;}//text3-be
+
+    .text4{width: 178px; height: 24px; background: url(../images/stage1/atext3.png)no-repeat; bottom: 47%; left:-38%; overflow: visible;
+      animation: text1 1s 3.5s 1 ease-in-out forwards;  }//text4
+    .text4:after{@extend %before; width: 118px; height: 38px; top: 17px; left: 151px; background: url(../images/stage1/arrow3.png)no-repeat;
+      transform: translate(-20px, 8px);
+      animation: text4-af 0.4s 3.7s 1 ease-in-out forwards;}//text4-af
+    .text4:before{@extend %before; width: 39px; height: 37px; top: -22px; left:-40px ; background: url(../images/stage1/atext3-ef.png)no-repeat;
+      transform: translate(20px, 5px) scale(0.8) rotate(-20deg);
+      animation: text4-be 0.4s 3.9s 1 ease-in-out forwards;}//text4-be
+
+    .text5{width: 109px; height: 24px; background: url(../images/stage1/atext4.png)no-repeat; top: 50%; right: -20%; overflow: visible;
+      animation: text1 1s 4.1s 1 ease-in-out forwards;}//text5
+    .text5:after{@extend %before; width: 112px; height: 43px; top: 16px; left: -83px; background: url(../images/stage1/arrow2.png)no-repeat;
+      transform: rotate(0deg) translate(20px, 18px);
+      animation: text5-af 0.4s 4.3s 1 ease-in-out forwards;}//text5-af
     .text1, .text2, .text3, .text4, .text5
     {background-size: cover;}
     
@@ -270,7 +311,7 @@ h1{
   .stage5{@extend %flex-direction-column; margin-top: 150px; width: 100%; height: 1527px; justify-content: space-between; align-items: center;
     .title{ width: 416px; height: 74px; background: url(../images/stage5/title.png)no-repeat; margin-bottom: 115px;}
     .box{@extend %flex-direction-row; justify-content: space-between; align-content: space-between; flex-wrap: wrap; width: 660px; height: 1343px; 
-     .item{@extend %flex-direction-column ; width: 252px; height: 420px; align-items: center; justify-content: flex-start; }
+     .item{@extend %flex-direction-column ; width: 252px; height: 420px; align-items: center; justify-content: flex-start; position: relative;}
      .item:nth-child(1){
        .img{width: 252px; height: 158px; background: url(../images/stage5/item1.png)no-repeat; margin: 35px 0 60px 0;}
       
@@ -282,7 +323,7 @@ h1{
       .item:nth-child(5){.img{background: url(../images/stage5/item5.png)no-repeat;}}//item1
       .item:nth-child(6){.img{background: url(../images/stage5/item6.png)no-repeat;}}//item1
     }//box
-    p{font-size: 21px; line-height: 28px;}
+    p{font-size: 21px; line-height: 28px; display: flex; position: absolute; left: 0; top: 250px;}
   }//stage5
 
 
