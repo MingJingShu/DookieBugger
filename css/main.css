@@ -298,7 +298,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 html {
   width: 100%;
-  background-color: #233945;
+  background-color: #dbbd95;
   height: 100%;
   overflow: auto; }
 
@@ -1165,7 +1165,7 @@ nav {
     background: url(../images/stage1/bugger-s2.png) no-repeat;
     left: 9%; }
   .stage2 {
-    margin-top: 100px; }
+    margin-top: 200px; }
   .stage2 .box {
     width: 546px;
     height: 970px; }
@@ -1187,8 +1187,8 @@ nav {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; }
-  .container, .BG {
-    height: 7433px; } }
+  .BG {
+    height: 7674px; } }
 
 @media screen and (max-width: 320px) {
   .container {

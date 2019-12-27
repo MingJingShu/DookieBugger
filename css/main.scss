@@ -413,7 +413,7 @@ h1{
         animation: stage1-bu2 2s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards;}//bugger
       .bugger-s{width: 529px; height: 148px;background: url(../images/stage1/bugger-s2.png)no-repeat; left: 9%;}
     }//stage1
-    .stage2{margin-top: 100px;}//BG add
+    .stage2{margin-top: 200px;}//BG add
     .stage2 .box{width: 546px; height: 970px;
             .content{
               .p1,.p2,.p3{width: 546px; height: 970px; background: url(../images/stage2/content2.png);}
@@ -429,7 +429,7 @@ h1{
       h1{font-size: 35px;}
     }//stage3
     .stage5 .box{width: 502px; justify-content: center;}
-    .container, .BG{height: 7433px;}
+    .BG{height: 7674px;}
   }//980
 
   @media screen and (max-width:320px){
