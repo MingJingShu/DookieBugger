@@ -58,8 +58,40 @@ else if(index === 4){
     //     {scrollTop: $(PagePos[index]).position().top+60},500);
 }//GoToScroll
 
+const header = '.header';
+const box = '.header .box';
+const boxAf = '.header .box:after';
+const titleBg1 ='.header .box .title-bg';
+const titleBg2 ='.header .box .title-bg2';
+const UL = '.header ul';
+const ULlogo = '.header ul .logo';
+
+const logo2 = '.header .box .logo2';
 $(window).scroll(function(){
     let scrollval = $(this).scrollTop();
+    if(scrollval < 100)
+    {
+        $(header).removeClass('header-scroll');
+        $(box).removeClass('w100h100');
+        $(boxAf).removeClass('box-after');
+        $(UL).removeClass('opac-0');
+        $(ULlogo).removeClass('opac-0');
+        $(logo2).removeClass('opac-1 logo2-after');
+        $(titleBg1).removeClass('opac-0');
+        $(titleBg2).removeClass('opac-0');}
+
+    if(scrollval >= 100)
+    {
+        $(header).addClass('header-scroll');
+        $(box).addClass('w100h100');
+        $(boxAf).addClass('box-after');
+        $(UL).addClass('opac-0');
+        $(ULlogo).addClass('opac-0');
+        $(logo2).addClass('opac-1 logo2-after');
+        $(titleBg1).addClass('opac-0');
+        $(titleBg2).addClass('opac-0');
+    }
+
     if(scrollval < 894)
     {   $(Points[0]).siblings().removeClass('L-start')
         $(Points[0]).addClass('L-start')}
@@ -78,7 +110,7 @@ $(window).scroll(function(){
         $(Points[4]).addClass('L-start')}
     // console.log('scroll val ={'+scrollval+"}");
     // console.log('posmain val ={'+posmain.top+"}");
-});
+});//window
 
 
 });//total

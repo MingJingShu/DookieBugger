@@ -144,28 +144,53 @@ h1{
 }
   main{
     width: 100%;
+    min-width: 1283px;
     height: 6553px;
     min-height: 6553px;
     @extend %flex-direction-column ;
     align-items: center;
   }
+  //z
+  nav{z-index: 1;}
+  .stage1 .bugger-s{z-index: 1;}
+  .stage1 .bugger{z-index: 2;}
+  .stage2 .box{z-index: 2;}
+  .stage3 .box .content{z-index: 2;}
+  .stage3 .left-arrow ,.stage3 .right-arrow{z-index: 3;}
+  .header{z-index: 5;}
+  .logo2{z-index: 7;}
+  .logo{z-index: 7;}
+  .header li{z-index: 7;}
 
-
-  .header{ z-index: 5;
-    max-width: 1200px; width: 100%; height: 100px; position: fixed; top: 20px; left: 50%; transform:translate(-50%,0%); @extend %flex-direction-row; justify-content: center;
-    .box{ @extend %flex-direction-row; width: 83%; justify-content: center; align-items: center; height: 141px; position: relative; overflow: visible;
+.header-scroll.header-scroll{top: 0;}
+.w100h100.w100h100.w100h100{width: 100%; height: 100px;}
+.opac-0.opac-0.opac-0.opac-0{opacity: 0;}
+.opac-1.opac-1.opac-1.opac-1{opacity: 1;}
+.box-after.box-after.box-after{height: 70%; top: 0;}
+.logo2-after.logo2-after.logo2-after.logo2-after{top: -20px;}
+  .header{ 
+    max-width: 1281px; width: 100%; height: 100px; position: fixed; top: 60px; left: 50%; transform:translate(-50%,0%); @extend %flex-direction-row; justify-content: center; transition: all 0.3s linear;
+    .box{ @extend %flex-direction-row; width: 83%; justify-content: center; align-items: center; height: 58px; position: relative; overflow: visible; 
+        background: url(../images/title.png)no-repeat; background-size: cover; transition: all 0.3s linear;
+      .title-bg, .title-bg2{transition: all 0.2s ease-in-out; position: relative; }
       & .title-bg{ overflow: visible;
-        width: 0; height: 0; border-style: solid; border-width: 0 26px 26px 0; border-color: transparent #987e62 transparent transparent; position: absolute; left: 0;bottom: 8.6px;}
+        width: 0; height: 0; border-style: solid; border-width: 0 26px 26px 0; border-color: transparent #987e62 transparent transparent; position: absolute; left: 0;bottom: -25.6px;}
       & .title-bg:after{content:""; width: 107px; height: 72px; position: absolute; left: -81px; top:-35px; background: url(../images/title-bg.png)no-repeat; z-index: -1;}
       & .title-bg2{
-          width: 0; height: 0; border-style: solid; border-width: 26px 26px 0 0; border-color: #987e62 transparent transparent transparent; position: absolute; right:0; bottom: 8.6px;}
+          width: 0; height: 0; border-style: solid; border-width: 26px 26px 0 0; border-color: #987e62 transparent transparent transparent; position: absolute; right:0; bottom: -25.6px;}
       & .title-bg2:after{content:""; width: 107px; height: 72px; position: absolute; right:-107px; top:-60px; background: url(../images/title-bg.png)no-repeat; z-index: -1; transform: rotateY(180deg);}
+      
+      .logo2{background: url(../images/logo2.png)no-repeat; background-size: cover; width: 142px; height: 141px;  position: absolute; opacity: 0;
+        left: 50%; transform: translateX(-50%); top: 0px; transition: all 0.3s ease-in-out;}//logo2
     }//.box
-    .box:after{content:""; width: 100%; height: 50%;  position: absolute; top: 35px; left: 0; background: url(../images/title.png)no-repeat; background-size: cover;}
-    ul{@extend %flex-direction-row; width: 90%; height: 100%; justify-content: space-between; align-items: center;}
-    .logo{background: url(../images/logo.png)no-repeat; background-size: cover; width: 142px; height: 141px; z-index: 7;}
+    // .box:after{content:""; width: 100%; height: 50%;  position: absolute; top: 35px; left: 0; }
+    ul{@extend %flex-direction-row; width: 90%; height: 100%; justify-content: space-between; align-items: center; 
+      transition: all 0.1s linear;}//ul
+    .logo{background: url(../images/logo.png)no-repeat; background-size: cover; width: 142px; height: 141px;
+         position: absolute; transform: translateX(-50%); left: 50%; top: -35px;}//logo
+    
     // .icon{@include basic-bg(../images/icon.png);}
-    li{@extend %basic-font; font-size: $title-font-size;z-index: 7; cursor: pointer;}
+    li{@extend %basic-font; font-size: $title-font-size; cursor: pointer;}
 
   }
   .container {
@@ -176,7 +201,7 @@ h1{
    .L-start{background-color: #007196; transform: scale(1.2);}
 
    nav{position: fixed; max-width: 1281px; top: 400px; left: 50%; transform: translateX(-50%); width: 100%; height: 160px; 
-       z-index: 1;
+       
       .left-point,.right-link{position: absolute; @extend %flex-direction-column;}
       .left-point{justify-content: space-around; align-items: center; width: 16px; height: 100%; left: 20px; 
         .L1,.L2,.L3,.L4,.L5{background-color: none; width: 12px; height: 12px; border-radius: 100px;  border: 1px solid white; cursor: pointer;
@@ -201,10 +226,10 @@ h1{
    //stage1
   .stage1{
     width: 100%; height: 834px; display: flex; position: relative;
-    .bugger{width: 636px; height: 542px; background: url(../images/stage1/bugger.png)no-repeat; background-size: cover; @extend %stage1-bugger; transform: translateX(0%); bottom: 17%; top: -85%; z-index: 2;
+    .bugger{width: 636px; height: 542px; background: url(../images/stage1/bugger.png)no-repeat; background-size: cover; @extend %stage1-bugger; transform: translateX(0%); bottom: 17%; top: -85%; ;
       animation: stage1-bu 2s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards;
     }//bugger
-    .bugger-s{width: 633px; height: 177px; background: url(../images/stage1/bugger-s.png)no-repeat; background-size: cover; @extend %stage1-bugger; bottom: 13%;  z-index: 1;
+    .bugger-s{width: 633px; height: 177px; background: url(../images/stage1/bugger-s.png)no-repeat; background-size: cover; @extend %stage1-bugger; bottom: 13%;  
       animation: stage1-sh 1.6s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards;  
     }//bugger-s
     .text1, .text2, .text3, .text4, .text5
@@ -271,7 +296,7 @@ h1{
         .p2{width: 682px; height: 512px;background: url(../images/stage3/content.png)no-repeat;}
         .p3{width: 682px; height: 512px;background: url(../images/stage3/content.png)no-repeat;}
       }//content
-      .left-arrow,.right-arrow{ width: 40px; height: 60px; cursor: pointer;position: absolute; z-index: 1; background-color: white; opacity: 0.5; transition: all transform 0.3s ease-in-out;
+      .left-arrow,.right-arrow{ width: 40px; height: 60px; cursor: pointer;position: absolute;  background-color: white; opacity: 0.5; transition: all transform 0.3s ease-in-out;
         span{background-color: black; width: 16px; height: 5px; display: flex; position: absolute;}
       }//left,right
       .left-arrow{left: 0;border-radius: 0px 50px 50px 0;
