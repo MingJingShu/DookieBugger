@@ -208,7 +208,7 @@ h1{
          box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.5); transition: all 0.2s ease-in-out;}//L1~L5
          .L1:active,.L2:active,.L3:active,.L4:active,.L5:active{transform: scale(0.9);}
       }//left
-      .right-link{justify-content: space-between; align-items: center; width: 100px; height: 100%; right: 0px; 
+      .right-link{justify-content: space-between; align-items: center; width: 100px; height: 100%; right: 0px; transition: all 0.2s linear;
        .fb,.ig{width: 100%; height: 70px; background-color: #fff; background: url(../images/right-link.png); cursor: pointer;}
        .ig{background-position: 0 -70px;}
       }//right
@@ -275,11 +275,12 @@ h1{
     .title{margin-bottom: 100px; width: 416px; height: 74px; background: url(../images/stage2/title.png)no-repeat;}
     .box{@extend %flex-direction-row; justify-content: center; align-items: center; width: 1032px; height: 975px; position: relative;
 
-      .content{width: 785px; height: 970px;  position: relative;
-        .p1,.p2,.p3{position: relative; cursor: pointer;}
-        .p1{width: 788px; height: 975px;background: url(../images/stage2/content.png)no-repeat;}
-        .p2{width: 788px; height: 975px;background: url(../images/stage2/content.png)no-repeat;}
-        .p3{width: 788px; height: 975px;background: url(../images/stage2/content.png)no-repeat;}
+      .content{width: 788px; height: 970px;  position: relative;
+        .p1,.p2,.p3{position: relative; cursor: pointer; width: 788px; height: 975px;}
+        .p1{background: url(../images/stage2/content.png)no-repeat;}
+        .p2{background: url(../images/stage2/content.png)no-repeat;}
+        .p3{background: url(../images/stage2/content.png)no-repeat;}
+        .p1,.p2,.p3{background-size: cover;}
       }//content
       .left-arrow,.right-arrow{background: url(../images/stage2/arrows.png)no-repeat; width: 80px; height: 80px; cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%);}
       .left-arrow{background-position: 0 0;left:0; transform-origin: left;}
@@ -353,18 +354,19 @@ h1{
   }//stage5
 
 
-   .footer{
-     position: absolute;
-     bottom: 0;
-     left: 0;
-   }
+  //  .footer{
+  //    position: absolute;
+  //    bottom: 0;
+  //    left: 0;
+  //  }
    /*just BG*/
 
    .BG{@extend %container-set; z-index: -999; background: url(../images/BG.jpg)no-repeat; background-size: cover; background-position:center center; position: absolute; left: 0; top: -161px;}
 
    @media screen and (max-width:1280px){
     .stage2{
-      .box{width: 785px;
+      .box{width: 788px;
+        .content{width: 100%;}
           .left-arrow,.right-arrow{ width: 40px; height: 60px; background: none; background-color: #fff; background-color: white; opacity: 0.5; transition: all transform 0.3s ease-in-out;
             transform-origin: center;
             span{background-color: black; width: 16px; height: 5px; display: flex; position: absolute;}
@@ -385,6 +387,7 @@ h1{
     }//stage2
    }//1280
   @media screen and (max-width:1200px){
+    nav .right-link{right: -20px;}
     .stage1{
       .text1{top: -30%;left: -19%;}
       .text2{top: 18%; left: -17%;}
@@ -396,14 +399,13 @@ h1{
       .text5{right: -13%;}
     } 
   }//1200
+
   @media screen and (max-width:980px){
-    
-
-
     .stage1{
       .text2,.text3,.text4,.text5{display: none;}
     } 
   }//980
+
   @media screen and (max-width:830px){
     .stage1{
       .text1{top: -45%; left: -7%; opacity: 0;}
@@ -411,6 +413,23 @@ h1{
         animation: stage1-bu2 2s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards;}//bugger
       .bugger-s{width: 529px; height: 148px;background: url(../images/stage1/bugger-s2.png)no-repeat; left: 9%;}
     }//stage1
+    .stage2{margin-top: 100px;}//BG add
+    .stage2 .box{width: 546px; height: 970px;
+            .content{
+              .p1,.p2,.p3{width: 546px; height: 970px; background: url(../images/stage2/content2.png);}
+            }//content
+    }//box
+    .stage3 {
+      .box{width: 546px;
+        .content{
+          .p1,.p2,.p3{width: 546px; background: url(../images/stage3/content2.png); }
+        }//content
+      }//box
+      .about-us{width: 546px;}
+      h1{font-size: 35px;}
+    }//stage3
+    .stage5 .box{width: 502px; justify-content: center;}
+    .container, .BG{height: 7433px;}
   }//980
 
   @media screen and (max-width:320px){
