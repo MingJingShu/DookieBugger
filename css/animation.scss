@@ -3,19 +3,26 @@
 // translateX(-50%) translateY(-155%)
 // translateX(-50%) translateY(-5%)
     @keyframes stage1-bu{
-      0%{ top: -85%; left: 25%;  }
-      80%{top: 17%; left: 25%; transform:  scaleX(1); }
-      90%{top: 23%; left: 25%;transform:  scaleX(1.2) scaleY(0.8);}
-      95%{top: 10%; left: 25%;transform:  scaleX(1) scaleY(1.2);}
-      100%{top: 17%;left: 25%;transform: scaleX(1) scaleY(1);}
+      0%{ top: -85%;   }
+      80%{top: 17%;  transform:  scaleX(1); }
+      90%{top: 23%; transform:  scaleX(1.2) scaleY(0.8);}
+      95%{top: 10%; transform:  scaleX(1) scaleY(1.2);}
+      100%{top: 17%;transform: scaleX(1) scaleY(1);}
+    }
+    @keyframes stage1-bu2{
+      0%{ top: -85%;   }
+      80%{top: 27%;  transform:  scaleX(1); }
+      90%{top: 33%; transform:  scaleX(1.2) scaleY(0.8);}
+      95%{top: 20%; transform:  scaleX(1) scaleY(1.2);}
+      100%{top: 27%;transform: scaleX(1) scaleY(1);}
     }
     @keyframes stage1-sh{
-      0%{transform: translateX(-50%) scale(0.5);}
-      20%{transform: translateX(-50%) scale(0.6);}
-      40%{transform: translateX(-50%) scale(0.7);}
-      60%{transform: translateX(-50%) scale(0.8);}
-      80%{transform: translateX(-50%) scale(0.9);}
-      100%{ transform:  translateX(-50%) scale(1);}
+      0%{transform:  scale(0.5);}
+      20%{transform:  scale(0.6);}
+      40%{transform:  scale(0.7);}
+      60%{transform:  scale(0.8);}
+      80%{transform:  scale(0.9);}
+      100%{ transform:   scale(1);}
     }
     @keyframes text1{
    

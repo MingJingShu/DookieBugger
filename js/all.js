@@ -67,31 +67,44 @@ const UL = '.header ul';
 const ULlogo = '.header ul .logo';
 
 const logo2 = '.header .box .logo2';
-$(window).scroll(function(){
-    let scrollval = $(this).scrollTop();
-    if(scrollval < 100)
-    {
+
+function menuAct(){
+    $(header).addClass('header-scroll');
+        $(box).addClass('w100h100');
+        $(boxAf).addClass('box-after');
+        $(logo2).addClass('opac-1 logo2-after');
+        $('.header ul ,.header ul .logo ,.header .box .title-bg, .header .box .title-bg2').addClass('opac-0');
+}
+
+function menuReset(){
         $(header).removeClass('header-scroll');
         $(box).removeClass('w100h100');
         $(boxAf).removeClass('box-after');
-        $(UL).removeClass('opac-0');
-        $(ULlogo).removeClass('opac-0');
         $(logo2).removeClass('opac-1 logo2-after');
-        $(titleBg1).removeClass('opac-0');
-        $(titleBg2).removeClass('opac-0');}
+        $('.header ul ,.header ul .logo ,.header .box .title-bg, .header .box .title-bg2').removeClass('opac-0');
+}
+
+
+$(window).resize(function(){
+    let winW = $(window).width();
+    let scrollval =$(window).scrollTop();
+    console.log('window width ={'+winW+'}');
+    if(winW<= 980)
+    {menuAct();}
+    else if(winW >980 && scrollval<100)
+    {menuReset();}
+})
+
+$(window).scroll(function(){
+    let scrollval = $(this).scrollTop();
+    let winW = $(window).width();
+    if(scrollval < 100)
+    { menuReset(); }
 
     if(scrollval >= 100)
-    {
-        $(header).addClass('header-scroll');
-        $(box).addClass('w100h100');
-        $(boxAf).addClass('box-after');
-        $(UL).addClass('opac-0');
-        $(ULlogo).addClass('opac-0');
-        $(logo2).addClass('opac-1 logo2-after');
-        $(titleBg1).addClass('opac-0');
-        $(titleBg2).addClass('opac-0');
-    }
-
+    { menuAct();}
+    if(winW <= 980)
+    {menuAct();}
     if(scrollval < 894)
     {   $(Points[0]).siblings().removeClass('L-start')
         $(Points[0]).addClass('L-start')}

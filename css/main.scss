@@ -144,7 +144,6 @@ h1{
 }
   main{
     width: 100%;
-    min-width: 1283px;
     height: 6553px;
     min-height: 6553px;
     @extend %flex-direction-column ;
@@ -154,7 +153,8 @@ h1{
   nav{z-index: 1;}
   .stage1 .bugger-s{z-index: 1;}
   .stage1 .bugger{z-index: 2;}
-  .stage2 .box{z-index: 2;}
+  .stage2 .box .content{z-index: 2;}
+  .stage2 .box .left-arrow,.stage2 .box .right-arrow{z-index: 3;}
   .stage3 .box .content{z-index: 2;}
   .stage3 .left-arrow ,.stage3 .right-arrow{z-index: 3;}
   .header{z-index: 5;}
@@ -226,14 +226,14 @@ h1{
    //stage1
   .stage1{
     width: 100%; height: 834px; display: flex; position: relative;
-    .bugger{width: 636px; height: 542px; background: url(../images/stage1/bugger.png)no-repeat; background-size: cover; @extend %stage1-bugger; transform: translateX(0%); bottom: 17%; top: -85%; ;
+    .bugger{width: 636px; height: 542px; background: url(../images/stage1/bugger.png)no-repeat; background-size: cover; @extend %stage1-bugger; transform: translateX(0%); bottom: 17%; top: -85%; left: 25%;
       animation: stage1-bu 2s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards;
     }//bugger
-    .bugger-s{width: 633px; height: 177px; background: url(../images/stage1/bugger-s.png)no-repeat; background-size: cover; @extend %stage1-bugger; bottom: 13%;  
+    .bugger-s{width: 633px; height: 177px; background: url(../images/stage1/bugger-s.png)no-repeat; background-size: cover; @extend %stage1-bugger; bottom: 13%;  left: 25%;
       animation: stage1-sh 1.6s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards;  
     }//bugger-s
     .text1, .text2, .text3, .text4, .text5
-    {@extend %stage1-text; opacity: 0;}
+    {@extend %stage1-text; opacity: 0; transition: all 0.3s linear;}
     .text1{width: 298px; height: 156px; background: url(../images/stage1/text1.png)no-repeat; top: -18%; left: -39%; 
       animation: text1 1s 2s 1 ease-in-out forwards;}//text1
 
@@ -273,16 +273,17 @@ h1{
   .stage2{
     @extend %flex-direction-column; margin-top: 60px; width: 100%; height: 1150px; align-items: center; justify-content: space-between; position: relative;
     .title{margin-bottom: 100px; width: 416px; height: 74px; background: url(../images/stage2/title.png)no-repeat;}
-    .box{@extend %flex-direction-row; justify-content: space-between; align-items: center; width: 1032px; height: 975px; 
-      .content{width: 788px; height: 975px;  position: relative;
+    .box{@extend %flex-direction-row; justify-content: center; align-items: center; width: 1032px; height: 975px; position: relative;
+
+      .content{width: 785px; height: 970px;  position: relative;
         .p1,.p2,.p3{position: relative; cursor: pointer;}
         .p1{width: 788px; height: 975px;background: url(../images/stage2/content.png)no-repeat;}
         .p2{width: 788px; height: 975px;background: url(../images/stage2/content.png)no-repeat;}
         .p3{width: 788px; height: 975px;background: url(../images/stage2/content.png)no-repeat;}
       }//content
-      .left-arrow,.right-arrow{background: url(../images/stage2/arrows.png)no-repeat; width: 80px; height: 80px; cursor: pointer;}
-      .left-arrow{background-position: 0 0;}
-      .right-arrow{background-position: -80px 0;}
+      .left-arrow,.right-arrow{background: url(../images/stage2/arrows.png)no-repeat; width: 80px; height: 80px; cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%);}
+      .left-arrow{background-position: 0 0;left:0; transform-origin: left;}
+      .right-arrow{background-position: -80px 0;right:0; transform-origin: right;}
     }//box
   }//.stage2
 
@@ -360,6 +361,57 @@ h1{
    /*just BG*/
 
    .BG{@extend %container-set; z-index: -999; background: url(../images/BG.jpg)no-repeat; background-size: cover; background-position:center center; position: absolute; left: 0; top: -161px;}
+
+   @media screen and (max-width:1280px){
+    .stage2{
+      .box{width: 785px;
+          .left-arrow,.right-arrow{ width: 40px; height: 60px; background: none; background-color: #fff; background-color: white; opacity: 0.5; transition: all transform 0.3s ease-in-out;
+            transform-origin: center;
+            span{background-color: black; width: 16px; height: 5px; display: flex; position: absolute;}
+            }//left,right
+            .left-arrow{left: 0;border-radius: 0px 50px 50px 0;
+              span{left: 10px;border-radius: 100px 0 0 100px;}
+              span:nth-child(1){transform: rotate(-45deg) skew(-45deg);top: 22px;}
+              span:nth-child(2){transform: rotate(45deg) skew(45deg);top: 33px;}
+            }//left
+            .right-arrow{right: 0;border-radius: 50px 0 0 50px;
+              span{left: 14px;border-radius: 0px 100px 100px 0px;}
+              span:nth-child(1){transform: rotate(45deg) skew(45deg);top: 22px;}
+              span:nth-child(2){transform: rotate(-45deg) skew(-45deg);top: 33px;}
+            }//right  
+            .left-arrow:hover,.right-arrow:hover{opacity:1;}
+            .left-arrow:active,.right-arrow:active{transform:scale(0.9) translateY(-50%);}   
+      }//box
+    }//stage2
+   }//1280
+  @media screen and (max-width:1200px){
+    .stage1{
+      .text1{top: -30%;left: -19%;}
+      .text2{top: 18%; left: -17%;}
+      .text2:after{top: 37px;left: 12px;}
+      .text3{top: -9%; right: -3%; width: 135px; height: 51px; background: url(../images/stage1/atext2-2.png)no-repeat;}
+      .text3:after{ left: 20px; top: 75px;}
+      .text4{bottom: 47%;  left: -16%; width: 87px; height: 53px; background: url(../images/stage1/atext3-2.png)no-repeat;}
+      .text4:after{top: 50px; left: 28px;}
+      .text5{right: -13%;}
+    } 
+  }//1200
+  @media screen and (max-width:980px){
+    
+
+
+    .stage1{
+      .text2,.text3,.text4,.text5{display: none;}
+    } 
+  }//980
+  @media screen and (max-width:830px){
+    .stage1{
+      .text1{top: -45%; left: -7%; opacity: 0;}
+      .bugger{width: 535px; height: 457px; background: url(../images/stage1/bugger2.png)no-repeat;     left: 9%;
+        animation: stage1-bu2 2s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards;}//bugger
+      .bugger-s{width: 529px; height: 148px;background: url(../images/stage1/bugger-s2.png)no-repeat; left: 9%;}
+    }//stage1
+  }//980
 
   @media screen and (max-width:320px){
     .container{max-width: 320px;}
