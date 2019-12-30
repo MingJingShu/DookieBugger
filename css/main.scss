@@ -514,4 +514,30 @@ h1{
     .BG{height: 7674px;}
   }//830
 
+  @media screen and (max-width:767px){
+    .container{width: 594px;}
+    .dark-bg{width: 594px;}
+    .stage1 .bugger{left: 27%;}
+    .stage1 .bugger-s{left: 27%;}
+
+    .stage2 .title,.stage2 .box,
+    .stage3 .title,.stage3 .box,
+    .stage4 .title,.stage4 .box,
+    .stage5 .title,.stage5 .box,
+    {margin-left: 18%;}
+    .stage2 .box{margin-left: 18%;}
+  }
+
+/*bootstrapt
+@media (max-width: 767px) {
+}
+@media (max-width: 480px) {
+}
+@media (min-width: 768px) and (max-width: 979px) {
+}
+@media (min-width: 980px) {
+}
+@media (min-width: 1200px) {
+}
+*/
   
