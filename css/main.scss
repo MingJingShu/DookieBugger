@@ -164,7 +164,7 @@ h1{
 
 .header-scroll.header-scroll{top: 0;}
 .w100h100.w100h100.w100h100{width: 100%; height: 100px;}
-.opac-0.opac-0.opac-0.opac-0{opacity: 0;}
+.opac-0.opac-0.opac-0.opac-0{opacity: 0; pointer-events: none;}
 .opac-1.opac-1.opac-1.opac-1{opacity: 1;}
 .box-after.box-after.box-after{height: 70%; top: 0;}
 .logo2-after.logo2-after.logo2-after.logo2-after{top: -20px;}
@@ -190,9 +190,46 @@ h1{
          position: absolute; transform: translateX(-50%); left: 50%; top: -35px;}//logo
     
     // .icon{@include basic-bg(../images/icon.png);}
-    li{@extend %basic-font; font-size: $title-font-size; cursor: pointer;}
+    li{@extend %basic-font; font-size: $title-font-size; cursor: pointer; overflow: visible; position: relative; transform-origin:center;}
+    li:hover{  transition: all 0.2s ease-in-out;}
+    li:active{transform: scale(0.9);}
+    li:nth-child(1):after,
+    li:nth-child(2):after,
+    li:nth-child(5):after,
+    li:nth-child(6):after,
+    {content: ''; position: absolute; bottom: -10px; left: 0; width: 100%; transform:scale(0.0); background-color: rgba(0,0,0,0.7); height: 5px; transition: all 0.2s ease-in-out;
+      transform-origin:center;}//after
 
-  }
+    // li:nth-child(1):before,
+    // li:nth-child(2):before,
+    // li:nth-child(5):before,
+    // li:nth-child(6):before
+    // {content: ''; position: absolute; top: 50%; transform: translateY(-50%); left: 0;}
+    // li:nth-child(1):before
+    // {content: '餐點介紹';}
+
+    
+    li:hover:nth-child(1):after,
+    li:hover:nth-child(2):after,
+    li:hover:nth-child(5):after,
+    li:hover:nth-child(6):after,
+    {transform:scale(1);}
+
+
+  }//header
+
+  .hamburger{position: fixed; cursor: pointer; left: 50px; top: 30px; opacity: 0; pointer-events: none; transition: opacity 0.2s ease-in-out;
+  width: 52px; height: 45px; 
+  span{width: 100%; height:7px; background-color: #007196;position: absolute; border-radius: 100px; transition: all 0.2s ease-in-out;}
+  span:nth-child(1){top: 0;}
+  span:nth-child(2){top: 18px;}
+  span:nth-child(3){top: 36px;}
+  }//hamburger
+  .hamburger.ham-active{opacity: 1; pointer-events: all; left: 50px; top: 30px;}
+
+  .hamburger.span-act span:nth-child(1){transform: rotate(45deg);top: 20px;}
+  .hamburger.span-act span:nth-child(2){opacity: 0;}
+  .hamburger.span-act span:nth-child(3){transform: rotate(-45deg);top: 20px;}
   .container {
   @extend %container-set;  position: relative;  -webkit-box-sizing: border-box; box-sizing: border-box;@extend %flex-direction-column; flex-wrap: wrap;
     margin-top: 161px; justify-content: flex-start;

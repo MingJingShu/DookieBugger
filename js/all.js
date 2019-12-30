@@ -67,12 +67,13 @@ const UL = '.header ul';
 const ULlogo = '.header ul .logo';
 
 const logo2 = '.header .box .logo2';
-
+const hamburger = '.hamburger';
 function menuAct(){
-    $(header).addClass('header-scroll');
+        $(header).addClass('header-scroll');
         $(box).addClass('w100h100');
         $(boxAf).addClass('box-after');
         $(logo2).addClass('opac-1 logo2-after');
+        $(hamburger).addClass('ham-active');
         $('.header ul ,.header ul .logo ,.header .box .title-bg, .header .box .title-bg2').addClass('opac-0');
 }
 
@@ -81,6 +82,7 @@ function menuReset(){
         $(box).removeClass('w100h100');
         $(boxAf).removeClass('box-after');
         $(logo2).removeClass('opac-1 logo2-after');
+        $(hamburger).removeClass('ham-active');
         $('.header ul ,.header ul .logo ,.header .box .title-bg, .header .box .title-bg2').removeClass('opac-0');
 }
 
@@ -124,6 +126,29 @@ $(window).scroll(function(){
     // console.log('scroll val ={'+scrollval+"}");
     // console.log('posmain val ={'+posmain.top+"}");
 });//window
+
+//hamburger toggle
+$(hamburger).click(function(){
+    $(this).toggleClass('span-act');
+})//hamburger toggle
+
+//header Li
+const Titles = [
+    '.header li:nth-child(1)',
+    '.header li:nth-child(2)',
+    '.header li:nth-child(5)',
+    '.header li:nth-child(6)',    
+]
+
+$('.header ul li').each(function(index){
+    // console.log('UL index ={'+index+'}');
+    $(Titles[index]).click(function(){
+        GoToScroll(index+1);
+    });
+});
+
+//header Li
+
 
 
 });//total
