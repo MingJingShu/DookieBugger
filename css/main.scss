@@ -161,6 +161,8 @@ h1{
   .logo2{z-index: 7;}
   .logo{z-index: 7;}
   .header li{z-index: 7;}
+  .dark-bg{z-index: 10;}
+  .hamburger.ham-active{z-index: 20;}
 
 .header-scroll.header-scroll{top: 0;}
 .w100h100.w100h100.w100h100{width: 100%; height: 100px;}
@@ -181,7 +183,7 @@ h1{
       & .title-bg2:after{content:""; width: 107px; height: 72px; position: absolute; right:-107px; top:-60px; background: url(../images/title-bg.png)no-repeat; z-index: -1; transform: rotateY(180deg);}
       
       .logo2{background: url(../images/logo2.png)no-repeat; background-size: cover; width: 142px; height: 141px;  position: absolute; opacity: 0;
-        left: 50%; transform: translateX(-50%); top: 0px; transition: all 0.3s ease-in-out;}//logo2
+        left: 50%; transform: translateX(-50%); top: 0px; cursor: pointer; transition: all 0.3s ease-in-out;}//logo2
     }//.box
     // .box:after{content:""; width: 100%; height: 50%;  position: absolute; top: 35px; left: 0; }
     ul{@extend %flex-direction-row; width: 90%; height: 100%; justify-content: space-between; align-items: center; 
@@ -200,15 +202,6 @@ h1{
     {content: ''; position: absolute; bottom: -10px; left: 0; width: 100%; transform:scale(0.0); background-color: rgba(0,0,0,0.7); height: 5px; transition: all 0.2s ease-in-out;
       transform-origin:center;}//after
 
-    // li:nth-child(1):before,
-    // li:nth-child(2):before,
-    // li:nth-child(5):before,
-    // li:nth-child(6):before
-    // {content: ''; position: absolute; top: 50%; transform: translateY(-50%); left: 0;}
-    // li:nth-child(1):before
-    // {content: '餐點介紹';}
-
-    
     li:hover:nth-child(1):after,
     li:hover:nth-child(2):after,
     li:hover:nth-child(5):after,
@@ -230,6 +223,43 @@ h1{
   .hamburger.span-act span:nth-child(1){transform: rotate(45deg);top: 20px;}
   .hamburger.span-act span:nth-child(2){opacity: 0;}
   .hamburger.span-act span:nth-child(3){transform: rotate(-45deg);top: 20px;}
+
+  //dark-bg
+  .dark-bg{
+    position: fixed; max-width: 1281px; width: 100%; height: 100%; pointer-events: none; top: 100px; background-color: rgba(0,0,0,0.5);opacity: 0;
+    transition: all 0.2s ease-in-out;
+    ul{@extend %flex-direction-column; width: 100%; height: 90%;
+       align-items: center;
+      li{color: white; position: absolute; opacity: 0;  cursor: pointer; font-size: 30px; 
+        left: 50%; transform: translateX(-50%); overflow: visible;
+        transition-property: opacity, transform;
+        transition-duration: 0.7s, 0.2s ,0.2s;//欲處理器處理後是三個值SO 給三個值
+        transition-timing-function: ease-in-out;}//li
+
+      li:active{transform: translateX(-50%) scale(0.95);}
+      li:nth-child(1){top: 20%;}
+      li:nth-child(2){top: 30%;}
+      li:nth-child(3){top: 40%;}
+      li:nth-child(4){top: 50%;}
+
+      li:nth-child(1):after,
+      li:nth-child(2):after,
+      li:nth-child(3):after,
+      li:nth-child(4):after
+      {content:""; width: 100%; height: 5px; opacity: 0; background-color: white; position: absolute; left: 0; bottom: -10px; 
+        transform-origin:center; transform: scale(0);
+        transition: all 0.2s ease-in-out;}//after
+      li:hover:nth-child(1):after,
+      li:hover:nth-child(2):after,
+      li:hover:nth-child(3):after,
+      li:hover:nth-child(4):after
+      {opacity: 1; transform: scale(1);}
+    }//ul
+  }//dark-bg
+  .dark-bg.dark-act{opacity: 1; pointer-events: all;
+  ul{li{opacity: 1;}}}//act
+
+
   .container {
   @extend %container-set;  position: relative;  -webkit-box-sizing: border-box; box-sizing: border-box;@extend %flex-direction-column; flex-wrap: wrap;
     margin-top: 161px; justify-content: flex-start;
