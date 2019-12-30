@@ -156,12 +156,15 @@ $('.header ul li').each(function(index){
     });
     $(darkTitles[index]).click(function(){
         GoToScroll(index+1);
-        $(hamburger).toggleClass('span-act');
+    $(hamburger).toggleClass('span-act');
     $('.dark-bg').toggleClass('dark-act');
     });
 
     $(logo2).click(function(){
+    $(hamburger).toggleClass('span-act');
+    $('.dark-bg').toggleClass('dark-act');
         GoToScroll(0);
+    
     });
 });
 //List Buttons

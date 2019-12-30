@@ -405,7 +405,9 @@ nav {
   top: 0; }
 
 .logo2-after.logo2-after.logo2-after.logo2-after {
-  top: -20px; }
+  top: -20px;
+  pointer-events: all;
+  cursor: pointer; }
 
 .header {
   max-width: 1281px;
@@ -495,7 +497,7 @@ nav {
       -ms-transform: translateX(-50%);
       transform: translateX(-50%);
       top: 0px;
-      cursor: pointer;
+      pointer-events: none;
       -webkit-transition: all 0.3s ease-in-out;
       -o-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out; }
@@ -521,7 +523,8 @@ nav {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     left: 50%;
-    top: -35px; }
+    top: -35px;
+    pointer-events: none; }
   .header li {
     font-size: 19px;
     cursor: pointer;
@@ -530,14 +533,17 @@ nav {
     -webkit-transform-origin: center;
     -ms-transform-origin: center;
     transform-origin: center; }
-  .header li:hover {
-    -webkit-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out; }
   .header li:active {
     -webkit-transform: scale(0.9);
     -ms-transform: scale(0.9);
     transform: scale(0.9); }
+  .header li:nth-child(1):hover,
+  .header li:nth-child(2):hover,
+  .header li:nth-child(5):hover,
+  .header li:nth-child(6):hover {
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
   .header li:nth-child(1):after,
   .header li:nth-child(2):after,
   .header li:nth-child(5):after,
@@ -547,11 +553,11 @@ nav {
     bottom: -10px;
     left: 0;
     width: 100%;
+    height: 5px;
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
     transform: scale(0);
     background-color: rgba(0, 0, 0, 0.7);
-    height: 5px;
     -webkit-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
@@ -622,7 +628,7 @@ nav {
   height: 100%;
   pointer-events: none;
   top: 100px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   opacity: 0;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -1374,7 +1380,3 @@ nav {
     justify-content: center; }
   .BG {
     height: 7674px; } }
-
-@media screen and (max-width: 320px) {
-  .container {
-    max-width: 320px; } }
