@@ -541,6 +541,7 @@ h1{
   }
 
 @media screen and(max-width:414px)and(min-width:300px){
+  html{width: 155%;}
   .stage1 .text1{left: -5%;}
   .stage2 .title{ width: 302px; height: 54px;background: url(../images/stage2/title2.png) no-repeat;}
   .stage2 .box{width: 249px;}
