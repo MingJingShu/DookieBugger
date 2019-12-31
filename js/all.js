@@ -100,6 +100,9 @@ $(window).resize(function(){
 $(window).scroll(function(){
     let scrollval = $(this).scrollTop();
     let winW = $(window).width();
+    let bodyval = $(document).scrollTop();
+    console.log('bodyval ={'+bodyval+'}');
+    // console.log('Scrollval ={'+scrollval+'}');
     if(scrollval < 100)
     { menuReset(); }
 
@@ -107,22 +110,65 @@ $(window).scroll(function(){
     { menuAct();}
     if(winW <= 980)
     {menuAct();}
-    if(scrollval < 894)
+    if(bodyval < 894)
     {   $(Points[0]).siblings().removeClass('L-start')
-        $(Points[0]).addClass('L-start')}
+        $(Points[0]).addClass('L-start')
+        $('.stage1').siblings().removeClass('stage-act');
+    }
     
-    if(scrollval >= 890 && scrollval <2194)
+     if(bodyval >= 894 && bodyval <2194)
     {   $(Points[1]).siblings().removeClass('L-start')
-        $(Points[1]).addClass('L-start')}
-    if(scrollval >= 2190 && scrollval <3634)
+        $(Points[1]).addClass('L-start');
+        $('.stage2').siblings().removeClass('stage-act');
+        $('.stage2').addClass('stage-act');
+        console.log('stage2');
+    }//stage2
+    if(bodyval >= 2194 && bodyval <3634)
     {   $(Points[2]).siblings().removeClass('L-start')
-        $(Points[2]).addClass('L-start')}
-    if(scrollval >= 3634 && scrollval <4568)
+        $(Points[2]).addClass('L-start')
+        $('.stage3').siblings().removeClass('stage-act');
+        $('.stage3').addClass('stage-act');
+        $('.stage3 .about-us ,.stage3 .about-us p:nth-child(2),.stage3 .about-us p:nth-child(3),.stage3 .about-us p:nth-child(4),.stage3 .about-us p:nth-child(5)')
+        .removeClass('stage-act');
+        // $('.stage3 .about-us p:nth-child(2)').removeClass('stage-act');
+        // $('.stage3 .about-us p:nth-child(3)').removeClass('stage-act');
+        console.log('stage3');
+    }//stage3
+    if(bodyval >= 2294 && bodyval <3634)
+    {
+        $('.stage3 .about-us').addClass('stage-act');
+        console.log('stage3.5');
+    }//3.5
+    if(bodyval >= 2314 && bodyval <3634)
+    {
+        $('.stage3 .about-us p:nth-child(2)').addClass('stage-act');
+    }//3.6
+    if(bodyval >= 2487 && bodyval <3634)
+    {
+        $('.stage3 .about-us p:nth-child(3)').addClass('stage-act');
+    }//3.7
+    if(bodyval >= 2634 && bodyval <3634)
+    {
+        $('.stage3 .about-us p:nth-child(4)').addClass('stage-act');
+    }//3.8
+    if(bodyval >= 2794 && bodyval <3634)
+    {
+        $('.stage3 .about-us p:nth-child(5)').addClass('stage-act');
+    }//3.8
+     if(bodyval >= 3634 && bodyval <4568)
     {   $(Points[3]).siblings().removeClass('L-start')
-        $(Points[3]).addClass('L-start')}
-    if(scrollval >= 4568)
+        $(Points[3]).addClass('L-start')
+        $('.stage4').siblings().removeClass('stage-act');
+        $('.stage4').addClass('stage-act');
+        console.log('stage4');
+    }//stage4
+     if(bodyval >= 4568)
     {   $(Points[4]).siblings().removeClass('L-start')
-        $(Points[4]).addClass('L-start')}
+        $(Points[4]).addClass('L-start')
+        $('.stage5').siblings().removeClass('stage-act');
+        $('.stage5').addClass('stage-act');
+        console.log('stage5');
+    }//stage5
     // console.log('scroll val ={'+scrollval+"}");
     // console.log('posmain val ={'+posmain.top+"}");
 });//window

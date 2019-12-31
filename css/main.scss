@@ -4,6 +4,7 @@
 @import "animation.scss";
 
 $all-font-family: Microsoft JhengHei;
+$all-font-family2:'微軟正黑體';
 
 .clearfix {
     display: block;
@@ -90,6 +91,7 @@ $all-font-family: Microsoft JhengHei;
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    font-family:$all-font-family , $all-font-family2;
   }
   
   html {
@@ -105,7 +107,7 @@ $all-font-family: Microsoft JhengHei;
   }
   
   p, button, input ,a, div{
-    font-family: Microsoft JhengHei;
+    font-family:$all-font-family , $all-font-family2;
   }
   a{
     color: $a-color;
@@ -113,6 +115,7 @@ $all-font-family: Microsoft JhengHei;
   ul, li, body {
     margin: 0;
     padding: 0;
+    font-family: $all-font-family , $all-font-family2;
   }
   
   ul, li {
@@ -153,7 +156,7 @@ h1{
   nav{z-index: 1;}
   .stage1 .bugger-s{z-index: 1;}
   .stage1 .bugger{z-index: 2;}
-  .stage2 .box .content{z-index: 2;}
+  .stage2.stage-act .box .content{z-index: 2;}
   .stage2 .box .left-arrow,.stage2 .box .right-arrow{z-index: 3;}
   .stage3 .box .content{z-index: 2;}
   .stage3 .left-arrow ,.stage3 .right-arrow{z-index: 3;}
@@ -274,9 +277,9 @@ h1{
 
    .L-start{background-color: #007196; transform: scale(1.2);}
 
-   nav{position: fixed; max-width: 1281px; top: 400px; left: 50%; transform: translateX(-50%); width: 100%; height: 160px; 
+   nav{position: fixed; max-width: 1281px; top: 400px; left: 50%; transform: translateX(-50%); width: 100%; height: 160px; pointer-events: none;
        
-      .left-point,.right-link{position: absolute; @extend %flex-direction-column;}
+      .left-point,.right-link{position: absolute; @extend %flex-direction-column; pointer-events: all;}
       .left-point{justify-content: space-around; align-items: center; width: 16px; height: 100%; left: 20px; 
         .L1,.L2,.L3,.L4,.L5{background-color: none; width: 12px; height: 12px; border-radius: 100px;  border: 1px solid white; cursor: pointer;
          box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.5); transition: all 0.2s ease-in-out;}//L1~L5
@@ -346,9 +349,9 @@ h1{
 
   .stage2{
     @extend %flex-direction-column; margin-top: 60px; width: 100%; height: 1150px; align-items: center; justify-content: space-between; position: relative;
-    .title{margin-bottom: 100px; width: 416px; height: 74px; background: url(../images/stage2/title.png)no-repeat;}
+    .title{margin-bottom: 100px; width: 416px; height: 74px; background: url(../images/stage2/title.png)no-repeat; transform: translate3d(0,50%,0); opacity: 0;}
     .box{@extend %flex-direction-row; justify-content: center; align-items: center; width: 1032px; height: 975px; position: relative;
-
+        opacity: 0; transform: translateX(100%); 
       .content{width: 788px; height: 970px;  position: relative;
         .p1,.p2,.p3{position: relative; cursor: pointer; width: 788px; height: 975px;}
         .p1{background: url(../images/stage2/content.png)no-repeat;}
@@ -362,10 +365,17 @@ h1{
     }//box
   }//.stage2
 
+  .stage2 .title{transition: all 0.3s ease-in-out;}
+  .stage2 .box{transition: all 0.5s ease-in-out;}
+  .stage2.stage-act{
+    .title{transform: translate3d(0,0,0); opacity: 1;} 
+    .box{opacity: 1; transform: translateX(0%); }
+  }//stage2-act
+  
   .stage3{
-    @extend %flex-direction-column; margin-top: 150px; width: 100%; height: 1290px; align-items: center; justify-content: space-between; position: relative;
-    .title{ width: 416px; height: 74px; background: url(../images/stage3/title.png)no-repeat;}
-    .box{@extend %flex-direction-row; justify-content: space-between; align-items: center; width: 682px; height: 512px;  position: relative;
+    @extend %flex-direction-column; margin-top: 150px; width: 100%; height: 1290px; align-items: center; justify-content: space-between; position: relative; overflow: hidden;
+    .title{ width: 416px; height: 74px; background: url(../images/stage3/title.png)no-repeat; transform: translateY(-100%);}
+    .box{@extend %flex-direction-row; justify-content: space-between; align-items: center; width: 682px; height: 512px;  position: relative; opacity: 0;
       .content{width: 100%; height: 100%;  position: relative;
         .p1,.p2,.p3{position: relative; cursor: pointer;}
         .p1{width: 682px; height: 512px;background: url(../images/stage3/content.png)no-repeat;}
@@ -389,13 +399,40 @@ h1{
       .left-arrow:hover,.right-arrow:hover{opacity:1;}
       .left-arrow:active,.right-arrow:active{transform:scale(0.9);}
     }//box
-    .about-us{width: 682px;}
+    .about-us{width: 682px; overflow: hidden;}
    
-    h1{ font-family: $all-font-family; margin-bottom: 40px;}
+    h1{ font-family: $all-font-family ,$all-font-family2; margin-bottom: 40px; opacity: 0; transform:translateX(-100%);}
     p{font-size: 21px; line-height: 28px;white-space: pre-line; margin-bottom: 30px;}
+    p:nth-child(2){opacity: 0; }
+    p:nth-child(3){opacity: 0;}
+    p:nth-child(4){opacity: 0;}
+    p:nth-child(5){opacity: 0; transform: scale(0.8);}
     p:last-child{margin: 0;}
     br{height: 30px;}
   }//.stage3
+
+  .stage3 .title{transition: all 0.3s ease-in-out;}
+  .stage3 .box{transition: all 1s ease-in-out;}
+  //text scroll ani
+  .stage3 .about-us h1{transition: all 1.2s ease-in-out;}
+  .stage3 .about-us p:nth-child(2){transition: all 1.5s ease-in-out;}
+  .stage3 .about-us p:nth-child(3){transition: all 1.2s ease-in-out;}
+  .stage3 .about-us p:nth-child(4){transition: all 1.2s ease-in-out;}
+  .stage3 .about-us p:nth-child(5){transition: all 1.2s ease-in-out;}
+  .stage3.stage-act{
+    .title{transform: translate3d(0,0,0); opacity: 1;} 
+    .box{opacity: 1; transform: translateX(0%); }
+    .about-us.stage-act{
+      h1{opacity: 1; transform:translateX(0%);}
+      p:nth-child(2).stage-act{opacity: 1;}
+      p:nth-child(3).stage-act{opacity: 1;}
+      p:nth-child(4).stage-act{opacity: 1;}
+      p:nth-child(5).stage-act{opacity: 1; transform: scale(1);}
+      
+    }//about-us
+  }//stage2-act
+
+
 
   .stage4{@extend %flex-direction-column; margin-top: 150px; height: 784px; justify-content: space-between; align-items: center; 
     .title{ width: 416px; height: 74px; background: url(../images/stage4/title.png)no-repeat; margin-bottom: 100px;}
@@ -547,14 +584,14 @@ h1{
   .stage1 .text1{left: -5%;}
   .stage2{    height: 1065px;}
   .stage2 .title{ width: 302px; height: 54px;background: url(../images/stage2/title2.png) no-repeat; margin-bottom: 0;}
-  .stage2 .box{width: 249px;}
-  .stage2 .box .content .p1, .stage2 .box .content .p2, .stage2 .box .content .p3
-  {width: 249px; height: 970px; background: url(../images/stage2/content3.png);}
+  // .stage2 .box{width: 249px;}
+  // .stage2 .box .content .p1, .stage2 .box .content .p2, .stage2 .box .content .p3
+  // {width: 249px; height: 970px; background: url(../images/stage2/content3.png);}
 
   .stage3 .title{ width: 302px; height: 54px;background: url(../images/stage3/title2.png) no-repeat;}
-  .stage3 .box{width: 249px; height: 512px; }
-  .stage3 .box .content .p1, .stage3 .box .content .p2, .stage3 .box .content .p3
-  {width: 249px; height: 512px; background: url(../images/stage3/content3.png) no-repeat;}
+  // .stage3 .box{width: 249px; height: 512px; }
+  // .stage3 .box .content .p1, .stage3 .box .content .p2, .stage3 .box .content .p3
+  // {width: 249px; height: 512px; background: url(../images/stage3/content3.png) no-repeat;}
 
   .stage4{    height: 715px;}
   .stage4 .title{ width: 302px; height: 54px;background: url(../images/stage4/title2.png) no-repeat; margin-bottom: 0;}
