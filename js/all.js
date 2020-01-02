@@ -101,6 +101,7 @@ $(window).scroll(function(){
     let scrollval = $(this).scrollTop();
     let winW = $(window).width();
     let bodyval = $(document).scrollTop();
+   
     console.log('bodyval ={'+bodyval+'}');
     // console.log('Scrollval ={'+scrollval+'}');
     if(scrollval < 100)
