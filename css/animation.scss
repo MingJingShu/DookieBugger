@@ -24,6 +24,13 @@
       80%{transform:  scale(0.9);}
       100%{ transform:   scale(1);}
     }
+    @keyframes stage1-bu-s{
+      0%{ top: -85%;   }
+      80%{top: 40%;  transform:  scaleX(1); }
+      90%{top: 46%; transform:  scaleX(1.2) scaleY(0.8);}
+      95%{top: 33%; transform:  scaleX(1) scaleY(1.2);}
+      100%{top: 46%;transform: scaleX(1) scaleY(1);}
+    }
     @keyframes text1{
    
       100%{opacity: 1;}

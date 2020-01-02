@@ -102,7 +102,7 @@ $(window).scroll(function(){
     let winW = $(window).width();
     let bodyval = $(document).scrollTop();
    
-    console.log('bodyval ={'+bodyval+'}');
+    // console.log('bodyval ={'+bodyval+'}');
     // console.log('Scrollval ={'+scrollval+'}');
     if(scrollval < 100)
     { menuReset(); }

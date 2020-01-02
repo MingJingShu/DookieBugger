@@ -122,6 +122,46 @@
     -webkit-transform: scale(1);
     transform: scale(1); } }
 
+@-webkit-keyframes stage1-bu-s {
+  0% {
+    top: -85%; }
+  80% {
+    top: 40%;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); }
+  90% {
+    top: 46%;
+    -webkit-transform: scaleX(1.2) scaleY(0.8);
+    transform: scaleX(1.2) scaleY(0.8); }
+  95% {
+    top: 33%;
+    -webkit-transform: scaleX(1) scaleY(1.2);
+    transform: scaleX(1) scaleY(1.2); }
+  100% {
+    top: 46%;
+    -webkit-transform: scaleX(1) scaleY(1);
+    transform: scaleX(1) scaleY(1); } }
+
+@keyframes stage1-bu-s {
+  0% {
+    top: -85%; }
+  80% {
+    top: 40%;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); }
+  90% {
+    top: 46%;
+    -webkit-transform: scaleX(1.2) scaleY(0.8);
+    transform: scaleX(1.2) scaleY(0.8); }
+  95% {
+    top: 33%;
+    -webkit-transform: scaleX(1) scaleY(1.2);
+    transform: scaleX(1) scaleY(1.2); }
+  100% {
+    top: 46%;
+    -webkit-transform: scaleX(1) scaleY(1);
+    transform: scaleX(1) scaleY(1); } }
+
 @-webkit-keyframes text1 {
   100% {
     opacity: 1; } }
@@ -808,6 +848,7 @@ nav {
   margin-top: 30px; }
 
 .stage1 {
+  pointer-events: none;
   width: 100%;
   height: 834px;
   display: -webkit-box;
@@ -815,7 +856,8 @@ nav {
   display: flex;
   position: relative; }
   .stage1 .bugger {
-    width: 636px;
+    max-width: 636px;
+    width: 100%;
     height: 542px;
     background: url(../images/stage1/bugger.png) no-repeat;
     background-size: cover;
@@ -1553,15 +1595,20 @@ nav {
 @media screen and (max-width: 830px) {
   .container {
     height: 7596px; }
+  main {
+    height: 7500px; }
   .stage1 .text1 {
     top: -45%;
     left: -7%;
     opacity: 0; }
   .stage1 .bugger {
-    width: 535px;
-    height: 457px;
-    background: url(../images/stage1/bugger2.png) no-repeat;
+    max-width: 535px;
+    max-height: 457px;
     left: 9%;
+    /*width: 80%;*/
+    background: url(../images/stage1/bugger2.png) no-repeat;
+    background-size: cover;
+    /*background-position: top center;*/
     -webkit-animation: stage1-bu2 2s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards;
     animation: stage1-bu2 2s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards; }
   .stage1 .bugger-s {
@@ -1610,7 +1657,7 @@ nav {
 
 @media screen and (max-width: 767px) {
   html {
-    width: 115%; } }
+    width: 100%; } }
 
 @media screen and (max-width: 414px) and (min-width: 300px) {
   html {
@@ -1629,19 +1676,26 @@ nav {
     background: url(../images/stage2/title2.png) no-repeat;
     margin-bottom: 0; }
   .stage3 {
-    height: 1450px; }
+    height: 1530px; }
   .stage3 .title {
     width: 302px;
     height: 54px;
     background: url(../images/stage3/title2.png) no-repeat; }
   .stage3 .box, .stage3 .about-us {
     width: 100%; }
+  .stage3 .about-us {
+    padding: 2% 5%; }
   .stage4 {
     height: 715px; }
   .stage4 .box {
     width: 100%; }
   .stage4 .box .subtitle {
     height: 100px; }
+  .stage4 .box .map {
+    width: 100%;
+    height: 51%;
+    background: url(../images/stage4/map2.png) no-repeat;
+    background-position: center; }
   .stage4 p {
     font-size: 1.2rem; }
   .stage4 .title {
