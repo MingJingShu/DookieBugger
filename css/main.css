@@ -1338,7 +1338,11 @@ nav {
     width: 416px;
     height: 74px;
     background: url(../images/stage5/title.png) no-repeat;
-    margin-bottom: 115px; }
+    margin-bottom: 115px;
+    opacity: 0;
+    -webkit-transform: scale(0.9) translateY(100%);
+    -ms-transform: scale(0.9) translateY(100%);
+    transform: scale(0.9) translateY(100%); }
   .stage5 .box {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -1358,7 +1362,10 @@ nav {
       -webkit-box-pack: start;
       -ms-flex-pack: start;
       justify-content: flex-start;
-      position: relative; }
+      position: relative;
+      -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      transform: scale(0.9); }
     .stage5 .box .item:nth-child(1) .img {
       width: 252px;
       height: 158px;
@@ -1387,6 +1394,32 @@ nav {
     position: absolute;
     left: 0;
     top: 250px; }
+
+.stage5 .title {
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+.stage5 .box .item {
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+
+.stage5.stage-act .title {
+  opacity: 1;
+  -webkit-transform: scale(1) translateY(0%);
+  -ms-transform: scale(1) translateY(0%);
+  transform: scale(1) translateY(0%); }
+
+.stage5.stage-act .box .item:nth-child(1).stage-act,
+.stage5.stage-act .box .item:nth-child(2).stage-act,
+.stage5.stage-act .box .item:nth-child(3).stage-act,
+.stage5.stage-act .box .item:nth-child(4).stage-act,
+.stage5.stage-act .box .item:nth-child(5).stage-act,
+.stage5.stage-act .box .item:nth-child(6).stage-act {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1); }
 
 /*just BG*/
 .BG {
@@ -1467,7 +1500,7 @@ nav {
   nav .right-link {
     right: -20px; }
   .stage1 .text1 {
-    top: -30%;
+    top: -26%;
     left: -19%; }
   .stage1 .text2 {
     top: 18%;
@@ -1560,7 +1593,9 @@ nav {
   .stage3 h1 {
     font-size: 35px; }
   .stage5 {
-    height: 2679px; }
+    height: 2600px; }
+  .stage5 .title {
+    margin-bottom: 0; }
   .stage5 .box {
     width: 502px;
     height: 2490px;

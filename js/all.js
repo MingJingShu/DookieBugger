@@ -183,15 +183,49 @@ $(window).scroll(function(){
     if(bodyval >= 3829 && bodyval <4454)
     {
         $('.stage4 .box .map').addClass('stage-act');
+        $('.stage5').removeClass('stage-act');
         console.log('stage4.3');
     }
-     if(bodyval >= 4454)
+     if(bodyval >= 4400 && bodyval <7000)
     {   $(Points[4]).siblings().removeClass('L-start')
         $(Points[4]).addClass('L-start')
         // $('.stage5').siblings().removeClass('stage-act');
         $('.stage5').addClass('stage-act');
+        $('.stage5 .box .item:nth-child(1),.stage5 .box .item:nth-child(2),.stage5 .box .item:nth-child(3),.stage5 .box .item:nth-child(4), .stage5 .box .item:nth-child(5),.stage5 .box .item:nth-child(6)')
+        .removeClass('stage-act');
         console.log('stage5');
     }//stage5 4454 width<764  origin4568
+    if(bodyval >= 4615 && bodyval <7000)
+    {
+        $('.stage5 .box .item:nth-child(1)').addClass('stage-act');
+        console.log('stage5.1');
+    }
+    if(bodyval >= 5014 && bodyval <7000)
+    {
+        $('.stage5 .box .item:nth-child(2)').addClass('stage-act');
+        console.log('stage5.2');
+    }
+    if(bodyval >= 5472 && bodyval <7000)
+    {
+        $('.stage5 .box .item:nth-child(3)').addClass('stage-act');
+        console.log('stage5.3');
+    }
+    if(bodyval >= 5805 && bodyval <7000)
+    {
+        $('.stage5 .box .item:nth-child(4)').addClass('stage-act');
+        console.log('stage5.4');
+    }
+    if(bodyval >= 6250 && bodyval <7000)
+    {
+        $('.stage5 .box .item:nth-child(5)').addClass('stage-act');
+        console.log('stage5.5');
+    }
+    if(bodyval >= 6700 && bodyval <7000)
+    {
+        $('.stage5 .box .item:nth-child(6)').addClass('stage-act');
+        console.log('stage5.6');
+    }
+
     // console.log('scroll val ={'+scrollval+"}");
     // console.log('posmain val ={'+posmain.top+"}");
     // $('.stage3 .about-us ,.stage3 .about-us p:nth-child(2),.stage3 .about-us p:nth-child(3),.stage3 .about-us p:nth-child(4),.stage3 .about-us p:nth-child(5)')
