@@ -949,7 +949,6 @@ nav {
     background-size: cover; }
 
 .stage2 {
-  margin-top: 60px;
   width: 100%;
   height: 1150px;
   -webkit-box-align: center;
@@ -1258,7 +1257,8 @@ nav {
     width: 416px;
     height: 74px;
     background: url(../images/stage4/title.png) no-repeat;
-    margin-bottom: 100px; }
+    margin-bottom: 100px;
+    opacity: 0; }
   .stage4 .box {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -1272,6 +1272,8 @@ nav {
       -ms-flex-pack: justify;
       justify-content: space-between;
       text-align: center; }
+    .stage4 .box .subtitle, .stage4 .box .content, .stage4 .box .map {
+      opacity: 0; }
     .stage4 .box .subtitle {
       height: 80px; }
     .stage4 .box .content {
@@ -1286,6 +1288,22 @@ nav {
   .stage4 p {
     font-size: 21px;
     line-height: 28px; }
+
+.stage4 .title {
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+.stage4 .box .subtitle {
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+
+.stage4.stage-act .title {
+  opacity: 1; }
+
+.stage4.stage-act .box .subtitle.stage-act {
+  opacity: 1; }
 
 .stage5 {
   margin-top: 150px;
@@ -1502,8 +1520,8 @@ nav {
     height: 148px;
     background: url(../images/stage1/bugger-s2.png) no-repeat;
     left: 9%; }
-  .stage2 {
-    margin-top: 200px; }
+  .stage1 {
+    margin-bottom: 200px; }
   .stage2 .box {
     width: 546px;
     height: 970px; }
@@ -1563,8 +1581,12 @@ nav {
     width: 100%; }
   .stage4 {
     height: 715px; }
+  .stage4 .box {
+    width: 100%; }
+  .stage4 .box .subtitle {
+    height: 100px; }
   .stage4 p {
-    font-size: 0.8rem; }
+    font-size: 1.2rem; }
   .stage4 .title {
     width: 302px;
     height: 54px;
@@ -1594,7 +1616,7 @@ nav {
     -ms-transform: translateX(0);
     transform: translateX(0); }
   .BG {
-    height: 7339px; } }
+    height: 7500px; } }
 
 /*bootstrapt
 @media (max-width: 767px) {
