@@ -538,6 +538,8 @@ h1{
   }//980
 
   @media screen and (max-width:830px){
+    .container{height: 7596px;}
+
     .stage1{
       .text1{top: -45%; left: -7%; opacity: 0;}
       .bugger{width: 535px; height: 457px; background: url(../images/stage1/bugger2.png)no-repeat;     left: 9%;
@@ -560,7 +562,8 @@ h1{
       .about-us{width: 546px;}
       h1{font-size: 35px;}
     }//stage3
-    .stage5 .box{width: 502px; justify-content: center;}
+    .stage5{height: 2679px;}
+    .stage5 .box{width: 502px; height: 2490px; justify-content: center;}
     .BG{height: 7674px;}
   }//830
 
@@ -596,7 +599,7 @@ h1{
 
   .stage4{    height: 715px;}
   .stage4 .title{ width: 302px; height: 54px;background: url(../images/stage4/title2.png) no-repeat; margin-bottom: 0;}
-  .stage5{height: 1470px;}
+  // .stage5{height: 1470px;}
   .stage5 .title{ width: 302px; height: 54px;background: url(../images/stage5/title2.png) no-repeat; margin-bottom: 0;}
 
   .stage3,

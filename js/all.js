@@ -156,20 +156,20 @@ $(window).scroll(function(){
     {
         $('.stage3 .about-us p:nth-child(5)').addClass('stage-act');
     }//3.8
-     if(bodyval >= 3634 && bodyval <4568)
+     if(bodyval >= 3634 && bodyval <4454)
     {   $(Points[3]).siblings().removeClass('L-start')
         $(Points[3]).addClass('L-start')
         $('.stage4').siblings().removeClass('stage-act');
         $('.stage4').addClass('stage-act');
         console.log('stage4');
     }//stage4
-     if(bodyval >= 4568)
+     if(bodyval >= 4454)
     {   $(Points[4]).siblings().removeClass('L-start')
         $(Points[4]).addClass('L-start')
         $('.stage5').siblings().removeClass('stage-act');
         $('.stage5').addClass('stage-act');
         console.log('stage5');
-    }//stage5
+    }//stage5 4454 width<764  origin4568
     // console.log('scroll val ={'+scrollval+"}");
     // console.log('posmain val ={'+posmain.top+"}");
 });//window

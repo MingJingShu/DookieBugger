@@ -1483,6 +1483,8 @@ nav {
     opacity: 0; } }
 
 @media screen and (max-width: 830px) {
+  .container {
+    height: 7596px; }
   .stage1 .text1 {
     top: -45%;
     left: -7%;
@@ -1519,8 +1521,11 @@ nav {
     width: 546px; }
   .stage3 h1 {
     font-size: 35px; }
+  .stage5 {
+    height: 2679px; }
   .stage5 .box {
     width: 502px;
+    height: 2490px;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; }
@@ -1556,8 +1561,6 @@ nav {
     height: 54px;
     background: url(../images/stage4/title2.png) no-repeat;
     margin-bottom: 0; }
-  .stage5 {
-    height: 1470px; }
   .stage5 .title {
     width: 302px;
     height: 54px;
