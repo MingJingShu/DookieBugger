@@ -46,13 +46,13 @@ else if(index === 1){
        $('html ,body').animate({scrollTop: $(PagePos[index]).position().top+60},500);
         }//1
 else if(index === 2){
-        $('html ,body').animate({scrollTop: $(PagePos[index]).position().top+150},500);
+        $('html ,body').animate({scrollTop: $(PagePos[index]).position().top+140},500);
         }//2
 else if(index === 3){
-        $('html ,body').animate({scrollTop: $(PagePos[index]).position().top+150},500);
+        $('html ,body').animate({scrollTop: $(PagePos[index]).position().top+120},500);
         }//3
 else if(index === 4){
-        $('html ,body').animate({scrollTop: $(PagePos[index]).position().top+150},500);
+        $('html ,body').animate({scrollTop: $(PagePos[index]).position().top+120},500);
         }//4
     // $('html ,body').animate(
     //     {scrollTop: $(PagePos[index]).position().top+60},500);
@@ -117,17 +117,17 @@ $(window).scroll(function(){
         $('.stage1').siblings().removeClass('stage-act');
     }
     
-     if(bodyval >= 1094 && bodyval <2194)
+     if(bodyval >= 800 && bodyval <1969)
     {   $(Points[1]).siblings().removeClass('L-start')
         $(Points[1]).addClass('L-start');
-        $('.stage2').siblings().removeClass('stage-act');
+        // $('.stage2').siblings().removeClass('stage-act');
         $('.stage2').addClass('stage-act');
         console.log('stage2');
     }//stage2
-    if(bodyval >= 2249 && bodyval <3774)
+    if(bodyval >= 1969 && bodyval <3774)
     {   $(Points[2]).siblings().removeClass('L-start')
         $(Points[2]).addClass('L-start')
-        $('.stage3').siblings().removeClass('stage-act');
+        // $('.stage3').siblings().removeClass('stage-act');
         $('.stage3').addClass('stage-act');
         $('.stage3 .about-us ,.stage3 .about-us p:nth-child(2),.stage3 .about-us p:nth-child(3),.stage3 .about-us p:nth-child(4),.stage3 .about-us p:nth-child(5)')
         .removeClass('stage-act');
@@ -160,26 +160,42 @@ $(window).scroll(function(){
         $('.stage3 .about-us p:nth-child(5)').addClass('stage-act');
         console.log('stage3.9');
     }//3.9
-     if(bodyval >= 3774 && bodyval <4454)
+
+     if(bodyval >= 3569 && bodyval <4454)
     {   $(Points[3]).siblings().removeClass('L-start')
         $(Points[3]).addClass('L-start')
-        $('.stage4').siblings().removeClass('stage-act');
+        // $('.stage4').siblings().removeClass('stage-act');
         $('.stage4').addClass('stage-act');
         $('.stage4 .box .subtitle').addClass('stage-act');
-        $('.stage3 .about-us ,.stage3 .about-us p:nth-child(2),.stage3 .about-us p:nth-child(3),.stage3 .about-us p:nth-child(4),.stage3 .about-us p:nth-child(5)')
-        .removeClass('stage-act');
+        $('.stage4 .box .content ,.stage4 .box .subtitle,.stage4 .box .map').removeClass('stage-act');
         console.log('stage4');
     }//stage4
-
+    if(bodyval >= 3669 && bodyval <4454)
+    {
+        $('.stage4 .box .subtitle').addClass('stage-act');
+        console.log('stage4.1');
+    }//4.1
+    if(bodyval >= 3729 && bodyval <4454)
+    {
+        $('.stage4 .box .content').addClass('stage-act');
+        console.log('stage4.2');
+    }//4.2
+    if(bodyval >= 3829 && bodyval <4454)
+    {
+        $('.stage4 .box .map').addClass('stage-act');
+        console.log('stage4.3');
+    }
      if(bodyval >= 4454)
     {   $(Points[4]).siblings().removeClass('L-start')
         $(Points[4]).addClass('L-start')
-        $('.stage5').siblings().removeClass('stage-act');
+        // $('.stage5').siblings().removeClass('stage-act');
         $('.stage5').addClass('stage-act');
         console.log('stage5');
     }//stage5 4454 width<764  origin4568
     // console.log('scroll val ={'+scrollval+"}");
     // console.log('posmain val ={'+posmain.top+"}");
+    // $('.stage3 .about-us ,.stage3 .about-us p:nth-child(2),.stage3 .about-us p:nth-child(3),.stage3 .about-us p:nth-child(4),.stage3 .about-us p:nth-child(5)')
+    //.removeClass('stage-act');
 });//window
 
 //hamburger toggle

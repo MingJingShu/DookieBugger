@@ -301,6 +301,7 @@ h1{
     position: absolute;
   }
   .stage1,.stage2,.stage3,.stage4,.stage5{overflow: hidden; width: 100%;}
+  .stage2,.stage3,.stage4,.stage5{ margin-top: 30px;}
    //stage1
   .stage1{
     width: 100%; height: 834px; display: flex; position: relative;
@@ -350,6 +351,7 @@ h1{
 
   .stage2{
     @extend %flex-direction-column; width: 100%; height: 1150px; align-items: center; justify-content: space-between; position: relative;
+   
     .title{margin-bottom: 100px; width: 416px; height: 74px; background: url(../images/stage2/title.png)no-repeat; transform: translate3d(0,50%,0); opacity: 0;}
     .box{@extend %flex-direction-row; justify-content: center; align-items: center; width: 1032px; height: 975px; position: relative;
         opacity: 0; transform: translateX(100%); 
@@ -449,10 +451,14 @@ h1{
   }//stage4
   .stage4 .title{transition: all 0.3s ease-in-out;}
   .stage4 .box .subtitle{transition: all 0.5s ease-in-out;}
+  .stage4 .box .content{transition: all 0.7s ease-in-out;}
+  .stage4 .box .map{transition: all 0.7s ease-in-out;}
   .stage4.stage-act{
     .title{opacity: 1;}
     .box{
         .subtitle.stage-act{opacity: 1;}
+        .content.stage-act{opacity: 1;}
+        .map.stage-act{opacity: 1;}
     }//box
 
   }//stage4=act
