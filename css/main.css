@@ -1362,10 +1362,7 @@ nav {
       -webkit-box-pack: start;
       -ms-flex-pack: start;
       justify-content: flex-start;
-      position: relative;
-      -webkit-transform: scale(0.9);
-      -ms-transform: scale(0.9);
-      transform: scale(0.9); }
+      position: relative; }
     .stage5 .box .item:nth-child(1) .img {
       width: 252px;
       height: 158px;
@@ -1574,6 +1571,8 @@ nav {
     left: 9%; }
   .stage1 {
     margin-bottom: 200px; }
+  nav .right-link {
+    display: none; }
   .stage2 .box {
     width: 546px;
     height: 970px; }
@@ -1602,6 +1601,10 @@ nav {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; }
+    .stage5 .box .item {
+      -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      transform: scale(0.9); }
   .BG {
     height: 7674px; } }
 
