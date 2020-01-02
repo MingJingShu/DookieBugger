@@ -801,7 +801,8 @@ nav {
   position: absolute; }
 
 .stage1, .stage2, .stage3, .stage4, .stage5 {
-  overflow: hidden; }
+  overflow: hidden;
+  width: 100%; }
 
 .stage1 {
   width: 100%;
@@ -1538,9 +1539,11 @@ nav {
 
 @media screen and (max-width: 414px) and (min-width: 300px) {
   html {
-    width: 169%; }
+    width: 100%; }
   main {
-    width: 108%; }
+    width: 100%; }
+  h1 {
+    font-size: 2rem; }
   .stage1 .text1 {
     left: -5%; }
   .stage2 {
@@ -1550,12 +1553,18 @@ nav {
     height: 54px;
     background: url(../images/stage2/title2.png) no-repeat;
     margin-bottom: 0; }
+  .stage3 {
+    height: 1450px; }
   .stage3 .title {
     width: 302px;
     height: 54px;
     background: url(../images/stage3/title2.png) no-repeat; }
+  .stage3 .box, .stage3 .about-us {
+    width: 100%; }
   .stage4 {
     height: 715px; }
+  .stage4 p {
+    font-size: 0.8rem; }
   .stage4 .title {
     width: 302px;
     height: 54px;
