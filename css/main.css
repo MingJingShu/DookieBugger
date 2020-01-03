@@ -529,8 +529,7 @@ nav {
       -webkit-transform: rotateY(180deg);
       transform: rotateY(180deg); }
     .header .box .logo2 {
-      background: url(../images/logo2.png) no-repeat;
-      background-size: cover;
+      background: url(../images/logos.png) -142px 0;
       width: 142px;
       height: 141px;
       position: absolute;
@@ -557,8 +556,7 @@ nav {
     -o-transition: all 0.1s linear;
     transition: all 0.1s linear; }
   .header .logo {
-    background: url(../images/logo.png) no-repeat;
-    background-size: cover;
+    background: url(../images/logos.png) 0 0;
     width: 142px;
     height: 141px;
     position: absolute;
@@ -616,7 +614,7 @@ nav {
     transform: scale(1); }
 
 .hamburger {
-  position: fixed;
+  position: absolute;
   cursor: pointer;
   left: 50px;
   top: 30px;
@@ -859,8 +857,7 @@ nav {
     max-width: 636px;
     width: 100%;
     height: 542px;
-    background: url(../images/stage1/bugger.png) no-repeat;
-    background-size: cover;
+    background: url(../images/stage1/main.png) 0 0;
     -webkit-transform: translateX(0%);
     -ms-transform: translateX(0%);
     transform: translateX(0%);
@@ -872,8 +869,7 @@ nav {
   .stage1 .bugger-s {
     width: 633px;
     height: 177px;
-    background: url(../images/stage1/bugger-s.png) no-repeat;
-    background-size: cover;
+    background: url(../images/stage1/main.png) 0 -542px;
     bottom: 13%;
     left: 25%;
     -webkit-animation: stage1-sh 1.6s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards;
@@ -886,7 +882,7 @@ nav {
   .stage1 .text1 {
     width: 298px;
     height: 156px;
-    background: url(../images/stage1/text1.png) no-repeat;
+    background: url(../images/stage1/atexts.png) 0 -196px;
     top: -18%;
     left: -39%;
     -webkit-animation: text1 1s 2s 1 ease-in-out forwards;
@@ -894,7 +890,7 @@ nav {
   .stage1 .text2 {
     width: 90px;
     height: 21px;
-    background: url(../images/stage1/atext1.png) no-repeat;
+    background: url(../images/stage1/atexts.png) 0px 0px;
     top: 17%;
     left: -28%;
     overflow: visible;
@@ -905,16 +901,16 @@ nav {
     height: 43px;
     top: 32px;
     left: 72px;
-    background: url(../images/stage1/arrow1.png) no-repeat;
     -webkit-transform: translate(-20px, -8px);
     -ms-transform: translate(-20px, -8px);
     transform: translate(-20px, -8px);
+    background: url(../images/stage1/arrows.png) -3px -96px;
     -webkit-animation: text2-af 0.4s 2.6s 1 ease-in-out forwards;
     animation: text2-af 0.4s 2.6s 1 ease-in-out forwards; }
   .stage1 .text3 {
     width: 221px;
     height: 23px;
-    background: url(../images/stage1/atext2.png) no-repeat;
+    background: url(../images/stage1/atexts.png) 0px -21px;
     top: 5%;
     right: -29%;
     overflow: visible;
@@ -925,7 +921,7 @@ nav {
     height: 43px;
     top: 42px;
     left: -36px;
-    background: url(../images/stage1/arrow2.png) no-repeat;
+    background: url(../images/stage1/arrows.png) -3px -47px;
     -webkit-animation: text3-af 0.4s 3s 1 ease-in-out forwards;
     animation: text3-af 0.4s 3s 1 ease-in-out forwards; }
   .stage1 .text3:before {
@@ -933,7 +929,7 @@ nav {
     height: 53px;
     top: -55px;
     right: -30px;
-    background: url(../images/stage1/atext2-ef.png) no-repeat;
+    background: url(../images/stage1/effects.png) 0px -37px;
     -webkit-transform: translate(-20px, 10px) scale(0.8) rotate(-45deg);
     -ms-transform: translate(-20px, 10px) scale(0.8) rotate(-45deg);
     transform: translate(-20px, 10px) scale(0.8) rotate(-45deg);
@@ -942,7 +938,7 @@ nav {
   .stage1 .text4 {
     width: 178px;
     height: 24px;
-    background: url(../images/stage1/atext3.png) no-repeat;
+    background: url(../images/stage1/atexts.png) 0px -44px;
     bottom: 47%;
     left: -38%;
     overflow: visible;
@@ -953,7 +949,7 @@ nav {
     height: 38px;
     top: 17px;
     left: 151px;
-    background: url(../images/stage1/arrow3.png) no-repeat;
+    background: url(../images/stage1/arrows.png) -3px -3px;
     -webkit-transform: translate(-20px, 8px);
     -ms-transform: translate(-20px, 8px);
     transform: translate(-20px, 8px);
@@ -964,7 +960,7 @@ nav {
     height: 37px;
     top: -22px;
     left: -40px;
-    background: url(../images/stage1/atext3-ef.png) no-repeat;
+    background: url(../images/stage1/effects.png) 0px 0px;
     -webkit-transform: translate(20px, 5px) scale(0.8) rotate(-20deg);
     -ms-transform: translate(20px, 5px) scale(0.8) rotate(-20deg);
     transform: translate(20px, 5px) scale(0.8) rotate(-20deg);
@@ -973,7 +969,7 @@ nav {
   .stage1 .text5 {
     width: 109px;
     height: 24px;
-    background: url(../images/stage1/atext4.png) no-repeat;
+    background: url(../images/stage1/atexts.png) 0px -68px;
     top: 50%;
     right: -20%;
     overflow: visible;
@@ -984,14 +980,12 @@ nav {
     height: 43px;
     top: 16px;
     left: -83px;
-    background: url(../images/stage1/arrow2.png) no-repeat;
+    background: url(../images/stage1/arrows.png) -3px -47px;
     -webkit-transform: rotate(0deg) translate(20px, 18px);
     -ms-transform: rotate(0deg) translate(20px, 18px);
     transform: rotate(0deg) translate(20px, 18px);
     -webkit-animation: text5-af 0.4s 4.3s 1 ease-in-out forwards;
     animation: text5-af 0.4s 4.3s 1 ease-in-out forwards; }
-  .stage1 .text1, .stage1 .text2, .stage1 .text3, .stage1 .text4, .stage1 .text5 {
-    background-size: cover; }
 
 .stage2 {
   width: 100%;
@@ -1007,7 +1001,7 @@ nav {
     margin-bottom: 100px;
     width: 416px;
     height: 74px;
-    background: url(../images/stage2/title.png) no-repeat;
+    background: url(../images/stage2/titles.png) 0px -54px;
     -webkit-transform: translate3d(0, 50%, 0);
     transform: translate3d(0, 50%, 0);
     opacity: 0; }
@@ -1051,7 +1045,11 @@ nav {
       top: 50%;
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
-      transform: translateY(-50%); }
+      transform: translateY(-50%);
+      -webkit-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      opacity: 0.5; }
     .stage2 .box .left-arrow {
       background-position: 0 0;
       left: 0;
@@ -1064,6 +1062,16 @@ nav {
       -webkit-transform-origin: right;
       -ms-transform-origin: right;
       transform-origin: right; }
+    .stage2 .box .left-arrow:hover, .stage2 .box .right-arrow:hover {
+      opacity: 1; }
+    .stage2 .box .left-arrow:active {
+      -webkit-transform: translateX(-10%) translateY(-50%);
+      -ms-transform: translateX(-10%) translateY(-50%);
+      transform: translateX(-10%) translateY(-50%); }
+    .stage2 .box .right-arrow:active {
+      -webkit-transform: translateX(10%) translateY(-50%);
+      -ms-transform: translateX(10%) translateY(-50%);
+      transform: translateX(10%) translateY(-50%); }
 
 .stage2 .title {
   -webkit-transition: all 0.3s ease-in-out;
@@ -1101,7 +1109,7 @@ nav {
   .stage3 .title {
     width: 416px;
     height: 74px;
-    background: url(../images/stage3/title.png) no-repeat;
+    background: url(../images/stage3/titles.png) 0px -54px;
     -webkit-transform: translateY(-100%);
     -ms-transform: translateY(-100%);
     transform: translateY(-100%); }
@@ -1301,7 +1309,7 @@ nav {
   .stage4 .title {
     width: 416px;
     height: 74px;
-    background: url(../images/stage4/title.png) no-repeat;
+    background: url(../images/stage4/titles.png) 0px -54px;
     margin-bottom: 100px;
     opacity: 0; }
   .stage4 .box {
@@ -1326,7 +1334,7 @@ nav {
     .stage4 .box .map {
       width: 457px;
       height: 311px;
-      background: url(../images/stage4/map.png) no-repeat; }
+      background: url(../images/stage4/maps.png) 0 -311px; }
     .stage4 .box a {
       color: black;
       text-decoration: underline; }
@@ -1379,7 +1387,7 @@ nav {
   .stage5 .title {
     width: 416px;
     height: 74px;
-    background: url(../images/stage5/title.png) no-repeat;
+    background: url(../images/stage5/titles.png) 0px -54px;
     margin-bottom: 115px;
     opacity: 0;
     -webkit-transform: scale(0.9) translateY(100%);
@@ -1408,22 +1416,22 @@ nav {
     .stage5 .box .item:nth-child(1) .img {
       width: 252px;
       height: 158px;
-      background: url(../images/stage5/item1.png) no-repeat;
+      background: url(../images/stage5/items.png) -1000px 0;
       margin: 35px 0 60px 0; }
     .stage5 .box .item:nth-child(2) .img, .stage5 .box .item:nth-child(3) .img, .stage5 .box .item:nth-child(4) .img, .stage5 .box .item:nth-child(5) .img, .stage5 .box .item:nth-child(6) .img {
       width: 200px;
       height: 200px;
       margin-bottom: 50px; }
     .stage5 .box .item:nth-child(2) .img {
-      background: url(../images/stage5/item2.png) no-repeat; }
+      background: url(../images/stage5/items.png) 0px 0; }
     .stage5 .box .item:nth-child(3) .img {
-      background: url(../images/stage5/item3.png) no-repeat; }
+      background: url(../images/stage5/items.png) -200px 0; }
     .stage5 .box .item:nth-child(4) .img {
-      background: url(../images/stage5/item4.png) no-repeat; }
+      background: url(../images/stage5/items.png) -400px 0; }
     .stage5 .box .item:nth-child(5) .img {
-      background: url(../images/stage5/item5.png) no-repeat; }
+      background: url(../images/stage5/items.png) -600px 0; }
     .stage5 .box .item:nth-child(6) .img {
-      background: url(../images/stage5/item6.png) no-repeat; }
+      background: url(../images/stage5/items.png) -800px 0; }
   .stage5 p {
     font-size: 21px;
     line-height: 28px;
@@ -1552,7 +1560,7 @@ nav {
     right: -3%;
     width: 135px;
     height: 51px;
-    background: url(../images/stage1/atext2-2.png) no-repeat; }
+    background: url(../images/stage1/atexts.png) 0px -92px; }
   .stage1 .text3:after {
     left: 20px;
     top: 75px; }
@@ -1561,7 +1569,7 @@ nav {
     left: -16%;
     width: 87px;
     height: 53px;
-    background: url(../images/stage1/atext3-2.png) no-repeat; }
+    background: url(../images/stage1/atexts.png) 0px -143px; }
   .stage1 .text4:after {
     top: 50px;
     left: 28px; }
@@ -1606,15 +1614,14 @@ nav {
     max-height: 457px;
     left: 9%;
     /*width: 80%;*/
-    background: url(../images/stage1/bugger2.png) no-repeat;
-    background-size: cover;
+    background: url(../images/stage1/main.png) -636px 0;
     /*background-position: top center;*/
     -webkit-animation: stage1-bu2 2s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards;
     animation: stage1-bu2 2s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards; }
   .stage1 .bugger-s {
     width: 529px;
     height: 148px;
-    background: url(../images/stage1/bugger-s2.png) no-repeat;
+    background: url(../images/stage1/main.png) -633px -542px;
     left: 9%; }
   .stage1 {
     margin-bottom: 200px; }
@@ -1675,7 +1682,7 @@ nav {
   .stage2 .title {
     width: 302px;
     height: 54px;
-    background: url(../images/stage2/title2.png) no-repeat;
+    background: url(../images/stage2/titles.png) 0px 0px;
     margin-bottom: 0; }
   .stage2 .box {
     width: 100%; }
@@ -1684,11 +1691,11 @@ nav {
   .stage2 .box .content .p1, .stage2 .box .content .p2, .stage2 .box .content .p3 {
     background-size: cover; }
   .stage3 {
-    height: 1530px; }
+    height: 1620px; }
   .stage3 .title {
     width: 302px;
     height: 54px;
-    background: url(../images/stage3/title2.png) no-repeat; }
+    background: url(../images/stage3/titles.png) 0px 0px; }
   .stage3 .box, .stage3 .about-us {
     width: 100%; }
   .stage3 .about-us {
@@ -1702,21 +1709,20 @@ nav {
   .stage4 .box .subtitle p {
     padding: 0 10%; }
   .stage4 .box .map {
-    width: 100%;
-    height: 51%;
-    background: url(../images/stage4/map2.png) no-repeat;
-    background-position: center; }
+    width: 236px;
+    height: 311px;
+    background: url(../images/stage4/maps.png) 0 0; }
   .stage4 p {
     font-size: 1.2rem; }
   .stage4 .title {
     width: 302px;
     height: 54px;
-    background: url(../images/stage4/title2.png) no-repeat;
+    background: url(../images/stage4/titles.png) 0px 0px;
     margin-bottom: 0; }
   .stage5 .title {
     width: 302px;
     height: 54px;
-    background: url(../images/stage5/title2.png) no-repeat;
+    background: url(../images/stage5/titles.png) 0px 0px;
     margin-bottom: 0; }
   .stage3,
   .stage4,
@@ -1737,7 +1743,7 @@ nav {
     -ms-transform: translateX(0);
     transform: translateX(0); }
   .BG {
-    height: 7500px; } }
+    height: 7615px; } }
 
 /*bootstrapt
 @media (max-width: 767px) {

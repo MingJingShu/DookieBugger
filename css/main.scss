@@ -185,13 +185,13 @@ h1{
           width: 0; height: 0; border-style: solid; border-width: 26px 26px 0 0; border-color: #987e62 transparent transparent transparent; position: absolute; right:0; bottom: -25.6px;}
       & .title-bg2:after{content:""; width: 107px; height: 72px; position: absolute; right:-107px; top:-60px; background: url(../images/title-bg.png)no-repeat; z-index: -1; transform: rotateY(180deg);}
       
-      .logo2{background: url(../images/logo2.png)no-repeat; background-size: cover; width: 142px; height: 141px;  position: absolute; opacity: 0;
+      .logo2{background: url(../images/logos.png) -142px 0; width: 142px; height: 141px;  position: absolute; opacity: 0;
         left: 50%; transform: translateX(-50%); top: 0px;  pointer-events: none; transition: all 0.3s ease-in-out;}//logo2
     }//.box
     // .box:after{content:""; width: 100%; height: 50%;  position: absolute; top: 35px; left: 0; }
     ul{@extend %flex-direction-row; width: 90%; height: 100%; justify-content: space-between; align-items: center; 
       transition: all 0.1s linear;}//ul
-    .logo{background: url(../images/logo.png)no-repeat; background-size: cover; width: 142px; height: 141px;
+    .logo{background: url(../images/logos.png) 0 0; width: 142px; height: 141px;
          position: absolute; transform: translateX(-50%); left: 50%; top: -35px; pointer-events: none;}//logo
     
     // .icon{@include basic-bg(../images/icon.png);}
@@ -221,7 +221,7 @@ h1{
 
   }//header
 
-  .hamburger{position: fixed; cursor: pointer; left: 50px; top: 30px; opacity: 0; pointer-events: none; transition: opacity 0.2s ease-in-out;
+  .hamburger{position: absolute; cursor: pointer; left: 50px; top: 30px; opacity: 0; pointer-events: none; transition: opacity 0.2s ease-in-out;
   width: 52px; height: 45px; 
   span{width: 100%; height:7px; background-color: #007196;position: absolute; border-radius: 100px; transition: all 0.2s ease-in-out;}
   span:nth-child(1){top: 0;}
@@ -305,54 +305,53 @@ h1{
    //stage1
   .stage1{pointer-events: none;
     width: 100%; height: 834px; display: flex; position: relative;
-    .bugger{max-width: 636px; width: 100%; height: 542px; background: url(../images/stage1/bugger.png)no-repeat; background-size: cover; @extend %stage1-bugger; transform: translateX(0%); bottom: 17%; top: -85%; left: 25%;
+    .bugger{max-width: 636px; width: 100%; height: 542px; background: url(../images/stage1/main.png) 0 0;  @extend %stage1-bugger; transform: translateX(0%); bottom: 17%; top: -85%; left: 25%;
       animation: stage1-bu 2s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards;
     }//bugger
-    .bugger-s{width: 633px; height: 177px; background: url(../images/stage1/bugger-s.png)no-repeat; background-size: cover; @extend %stage1-bugger; bottom: 13%;  left: 25%;
+    .bugger-s{width: 633px; height: 177px; background: url(../images/stage1/main.png) 0 -542px;  @extend %stage1-bugger; bottom: 13%;  left: 25%;
       animation: stage1-sh 1.6s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards;  
     }//bugger-s
     .text1, .text2, .text3, .text4, .text5
     {@extend %stage1-text; opacity: 0; transition: all 0.3s linear;}
-    .text1{width: 298px; height: 156px; background: url(../images/stage1/text1.png)no-repeat; top: -18%; left: -39%; 
+    .text1{width: 298px; height: 156px; background: url(../images/stage1/atexts.png) 0 -196px; top: -18%; left: -39%; 
       animation: text1 1s 2s 1 ease-in-out forwards;}//text1
 
-    .text2{width: 90px; height: 21px; background: url(../images/stage1/atext1.png)no-repeat; top: 17%; left: -28%; overflow: visible;
+    .text2{width: 90px; height: 21px; background: url(../images/stage1/atexts.png) -0px -0px; top: 17%; left: -28%; overflow: visible;
       animation: text1 1s 2.4s 1 ease-in-out forwards;}//text2
-    .text2:after{@extend %before; width: 114px; height: 43px; top: 32px; left: 72px; background: url(../images/stage1/arrow1.png)no-repeat;
-      transform: translate(-20px, -8px); 
+    .text2:after{@extend %before; width: 114px; height: 43px; top: 32px; left: 72px; 
+      transform: translate(-20px, -8px); background: url(../images/stage1/arrows.png) -3px -96px;
       animation: text2-af 0.4s 2.6s 1 ease-in-out forwards;}//text2-af
 
-    .text3{width: 221px; height: 23px; background: url(../images/stage1/atext2.png)no-repeat; top: 5%; right:-29%; overflow: visible;
+    .text3{width: 221px; height: 23px; background: url(../images/stage1/atexts.png) -0px -21px; top: 5%; right:-29%; overflow: visible;
       animation: text1 1s 2.8s 1 ease-in-out forwards;}//text3
-    .text3:after{@extend %before; width: 112px; height: 43px; top: 42px; left: -36px; background: url(../images/stage1/arrow2.png)no-repeat;
+    .text3:after{@extend %before; width: 112px; height: 43px; top: 42px; left: -36px; background: url(../images/stage1/arrows.png) -3px -47px;
       animation: text3-af 0.4s 3s 1 ease-in-out forwards;}//text3-af
-    .text3:before{@extend %before; width: 48px; height: 53px; top: -55px; right: -30px; background: url(../images/stage1/atext2-ef.png)no-repeat;
+    .text3:before{@extend %before; width: 48px; height: 53px; top: -55px; right: -30px; background: url(../images/stage1/effects.png) -0px -37px;
       transform: translate(-20px, 10px) scale(0.8) rotate(-45deg);
       animation: text3-be 0.4s 3.1s 1 ease-in-out forwards;}//text3-be
 
-    .text4{width: 178px; height: 24px; background: url(../images/stage1/atext3.png)no-repeat; bottom: 47%; left:-38%; overflow: visible;
+    .text4{width: 178px; height: 24px; background: url(../images/stage1/atexts.png) -0px -44px; bottom: 47%; left:-38%; overflow: visible;
       animation: text1 1s 3.5s 1 ease-in-out forwards;  }//text4
-    .text4:after{@extend %before; width: 118px; height: 38px; top: 17px; left: 151px; background: url(../images/stage1/arrow3.png)no-repeat;
+    .text4:after{@extend %before; width: 118px; height: 38px; top: 17px; left: 151px; background: url(../images/stage1/arrows.png) -3px -3px;
       transform: translate(-20px, 8px);
       animation: text4-af 0.4s 3.7s 1 ease-in-out forwards;}//text4-af
-    .text4:before{@extend %before; width: 39px; height: 37px; top: -22px; left:-40px ; background: url(../images/stage1/atext3-ef.png)no-repeat;
+    .text4:before{@extend %before; width: 39px; height: 37px; top: -22px; left:-40px ; background: url(../images/stage1/effects.png) -0px -0px;
       transform: translate(20px, 5px) scale(0.8) rotate(-20deg);
       animation: text4-be 0.4s 3.9s 1 ease-in-out forwards;}//text4-be
 
-    .text5{width: 109px; height: 24px; background: url(../images/stage1/atext4.png)no-repeat; top: 50%; right: -20%; overflow: visible;
+    .text5{width: 109px; height: 24px; background: url(../images/stage1/atexts.png) -0px -68px; top: 50%; right: -20%; overflow: visible;
       animation: text1 1s 4.1s 1 ease-in-out forwards;}//text5
-    .text5:after{@extend %before; width: 112px; height: 43px; top: 16px; left: -83px; background: url(../images/stage1/arrow2.png)no-repeat;
+    .text5:after{@extend %before; width: 112px; height: 43px; top: 16px; left: -83px; background: url(../images/stage1/arrows.png) -3px -47px;
       transform: rotate(0deg) translate(20px, 18px);
       animation: text5-af 0.4s 4.3s 1 ease-in-out forwards;}//text5-af
-    .text1, .text2, .text3, .text4, .text5
-    {background-size: cover;}
+    
     
   }//stage1
 
   .stage2{
     @extend %flex-direction-column; width: 100%; height: 1150px; align-items: center; justify-content: space-between; position: relative;
    
-    .title{margin-bottom: 100px; width: 416px; height: 74px; background: url(../images/stage2/title.png)no-repeat; transform: translate3d(0,50%,0); opacity: 0;}
+    .title{margin-bottom: 100px; width: 416px; height: 74px; background: url(../images/stage2/titles.png) 0px -54px; transform: translate3d(0,50%,0); opacity: 0;}
     .box{@extend %flex-direction-row; justify-content: center; align-items: center; width: 1032px; height: 975px; position: relative;
         opacity: 0; transform: translateX(100%); 
       .content{width: 788px; height: 970px;  position: relative;
@@ -362,9 +361,14 @@ h1{
         .p3{background: url(../images/stage2/content.png)no-repeat;}
         .p1,.p2,.p3{background-size: cover;}
       }//content
-      .left-arrow,.right-arrow{background: url(../images/stage2/arrows.png)no-repeat; width: 80px; height: 80px; cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%);}
+      .left-arrow,.right-arrow{background: url(../images/stage2/arrows.png)no-repeat; width: 80px; height: 80px; cursor: pointer; position: absolute; top: 50%; 
+        transform: translateY(-50%); transition: all 0.2s ease-in-out; opacity: 0.5;}//.LR
+      
       .left-arrow{background-position: 0 0;left:0; transform-origin: left;}
       .right-arrow{background-position: -80px 0;right:0; transform-origin: right;}
+      .left-arrow:hover,.right-arrow:hover{opacity: 1;}
+      .left-arrow:active{transform: translateX(-10%) translateY(-50%);}
+      .right-arrow:active{transform: translateX(10%) translateY(-50%);}
     }//box
   }//.stage2
 
@@ -377,7 +381,7 @@ h1{
   
   .stage3{
     @extend %flex-direction-column; margin-top: 150px; width: 100%; height: 1290px; align-items: center; justify-content: space-between; position: relative; overflow: hidden;
-    .title{ width: 416px; height: 74px; background: url(../images/stage3/title.png)no-repeat; transform: translateY(-100%);}
+    .title{ width: 416px; height: 74px; background: url(../images/stage3/titles.png) 0px -54px; transform: translateY(-100%);}
     .box{@extend %flex-direction-row; justify-content: space-between; align-items: center; width: 682px; height: 512px;  position: relative; opacity: 0;
       .content{width: 100%; height: 100%;  position: relative;
         .p1,.p2,.p3{position: relative; cursor: pointer;}
@@ -438,13 +442,13 @@ h1{
 
 
   .stage4{@extend %flex-direction-column; margin-top: 150px; height: 784px; justify-content: space-between; align-items: center; 
-    .title{ width: 416px; height: 74px; background: url(../images/stage4/title.png)no-repeat; margin-bottom: 100px; opacity: 0;}
+    .title{ width: 416px; height: 74px; background: url(../images/stage4/titles.png) 0px -54px; margin-bottom: 100px; opacity: 0;}
     .box{@extend %flex-direction-column; justify-content: space-between; align-items: center; height: 610px;
       .subtitle,.content{@extend %flex-direction-column; justify-content: space-between; text-align: center;}
       .subtitle,.content,.map{opacity: 0;}
       .subtitle{ height: 80px; }
       .content{height: 144px; }
-      .map{width: 457px; height: 311px; background: url(../images/stage4/map.png)no-repeat;}
+      .map{width: 457px; height: 311px; background: url(../images/stage4/maps.png) 0 -311px;}
       a{color: black; text-decoration:underline;}
     }//box
     p{font-size: 21px; line-height: 28px;}
@@ -467,22 +471,22 @@ h1{
 
 
   .stage5{@extend %flex-direction-column; margin-top: 150px; width: 100%; height: 1527px; justify-content: space-between; align-items: center;
-    .title{ width: 416px; height: 74px; background: url(../images/stage5/title.png)no-repeat; margin-bottom: 115px; 
+    .title{ width: 416px; height: 74px; background: url(../images/stage5/titles.png) 0px -54px; margin-bottom: 115px; 
       opacity: 0; transform: scale(0.9) translateY(100%);}//title
     .box{@extend %flex-direction-row; justify-content: space-between; align-content: space-between; flex-wrap: wrap; width: 660px; height: 1343px; 
      .item{@extend %flex-direction-column ; width: 252px; height: 420px; align-items: center; justify-content: flex-start; position: relative;
           
           }//item
      .item:nth-child(1){
-       .img{width: 252px; height: 158px; background: url(../images/stage5/item1.png)no-repeat; margin: 35px 0 60px 0;}
+       .img{width: 252px; height: 158px; background: url(../images/stage5/items.png) -1000px 0; margin: 35px 0 60px 0;}
       
       }//item1
       .item:nth-child(2) .img,.item:nth-child(3) .img,.item:nth-child(4) .img,.item:nth-child(5) .img,.item:nth-child(6) .img{width: 200px; height: 200px; margin-bottom: 50px;}
-      .item:nth-child(2){.img{background: url(../images/stage5/item2.png)no-repeat;}}//item1
-      .item:nth-child(3){.img{background: url(../images/stage5/item3.png)no-repeat;}}//item1
-      .item:nth-child(4){.img{background: url(../images/stage5/item4.png)no-repeat;}}//item1
-      .item:nth-child(5){.img{background: url(../images/stage5/item5.png)no-repeat;}}//item1
-      .item:nth-child(6){.img{background: url(../images/stage5/item6.png)no-repeat;}}//item1
+      .item:nth-child(2){.img{background: url(../images/stage5/items.png) 0px 0;}}//item1
+      .item:nth-child(3){.img{background: url(../images/stage5/items.png) -200px 0;}}//item1
+      .item:nth-child(4){.img{background: url(../images/stage5/items.png) -400px 0;}}//item1
+      .item:nth-child(5){.img{background: url(../images/stage5/items.png) -600px 0;}}//item1
+      .item:nth-child(6){.img{background: url(../images/stage5/items.png) -800px 0;}}//item1
     }//box
     p{font-size: 21px; line-height: 28px; display: flex; position: absolute; left: 0; top: 250px;}
   }//stage5
@@ -548,9 +552,9 @@ h1{
       .text1{top: -26%;left: -19%;}
       .text2{top: 18%; left: -17%;}
       .text2:after{top: 37px;left: 12px;}
-      .text3{top: -9%; right: -3%; width: 135px; height: 51px; background: url(../images/stage1/atext2-2.png)no-repeat;}
+      .text3{top: -9%; right: -3%; width: 135px; height: 51px; background: url(../images/stage1/atexts.png) -0px -92px;}
       .text3:after{ left: 20px; top: 75px;}
-      .text4{bottom: 47%;  left: -16%; width: 87px; height: 53px; background: url(../images/stage1/atext3-2.png)no-repeat;}
+      .text4{bottom: 47%;  left: -16%; width: 87px; height: 53px; background: url(../images/stage1/atexts.png) -0px -143px;}
       .text4:after{top: 50px; left: 28px;}
       .text5{right: -13%;}
     } 
@@ -579,10 +583,10 @@ h1{
     .stage1{
       .text1{top: -45%; left: -7%; opacity: 0;}
       .bugger{max-width: 535px; max-height: 457px;     left: 9%; /*width: 80%;*/
-        background: url(../images/stage1/bugger2.png)no-repeat; background-size: cover; /*background-position: top center;*/
+        background: url(../images/stage1/main.png) -636px 0; /*background-position: top center;*/
         animation: stage1-bu2 2s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards;
         }//bugger
-      .bugger-s{width: 529px; height: 148px;background: url(../images/stage1/bugger-s2.png)no-repeat; left: 9%;}
+      .bugger-s{width: 529px; height: 148px;background: url(../images/stage1/main.png) -633px -542px; left: 9%;}
     }//stage1
     .stage1{margin-bottom: 200px;}
     //BG add
@@ -639,7 +643,7 @@ h1{
   // .stage1 .bugger{    width: 100%; height: 41%; left: 0; top: 50%; background-position: left top; animation: stage1-bu-s 2s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards;}
   .stage2{   height: 1065px;}
   // .stage2 .box{width: 100%;}
-  .stage2 .title{ width: 302px; height: 54px;background: url(../images/stage2/title2.png) no-repeat; margin-bottom: 0;}
+  .stage2 .title{ width: 302px; height: 54px;background: url(../images/stage2/titles.png) 0px -0px;; margin-bottom: 0;}
   .stage2 .box{width: 100%; }
   .stage2 .content{width: 100%;}
   // .stage2 .box .content .p1{background: url(../images/stage2/content4.png)no-repeat;}
@@ -650,8 +654,8 @@ h1{
   .stage2 .box .content .p1,
   .stage2 .box .content .p2,
   .stage2 .box .content .p3{background-size: cover;}
-  .stage3{height: 1530px;}
-  .stage3 .title{ width: 302px; height: 54px;background: url(../images/stage3/title2.png) no-repeat;}
+  .stage3{height: 1620px;}//height: 1540px;
+  .stage3 .title{ width: 302px; height: 54px;background: url(../images/stage3/titles.png) 0px 0px;}
   .stage3 .box, .stage3 .about-us{width: 100%;}
   .stage3 .about-us{padding: 2% 5%;}
 
@@ -660,12 +664,12 @@ h1{
   .stage4 .box{width: 100%;}
   .stage4 .box .subtitle{height: 100px;}
   .stage4 .box .subtitle p{padding: 0 10%;}
-  .stage4 .box .map{    width: 100%; height: 51%; background: url(../images/stage4/map2.png)no-repeat; background-position: center; }
+  .stage4 .box .map{    width: 236px; height: 311px; background: url(../images/stage4/maps.png) 0 0; }
   .stage4 p{font-size: 1.2rem;}
-  .stage4 .title{ width: 302px; height: 54px;background: url(../images/stage4/title2.png) no-repeat; margin-bottom: 0;}
+  .stage4 .title{ width: 302px; height: 54px;background: url(../images/stage4/titles.png) 0px -0px; margin-bottom: 0;}
 
   // .stage5{height: 1470px;}
-  .stage5 .title{ width: 302px; height: 54px;background: url(../images/stage5/title2.png) no-repeat; margin-bottom: 0;}
+  .stage5 .title{ width: 302px; height: 54px;background: url(../images/stage5/titles.png) 0px 0px; margin-bottom: 0;}
 
   .stage3,
   .stage4,
@@ -674,7 +678,7 @@ h1{
   .right-link{right: -20px;}
   }//nav
   .header{width: inherit; left: 0; transform: translateX(0);}
-  .BG{height: 7500px}
+  .BG{height: 7615px}//7500
 }
 /*bootstrapt
 @media (max-width: 767px) {
