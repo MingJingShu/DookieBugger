@@ -9,10 +9,9 @@ $(document).ready(function(){
         speed: 300,
         slidesToShow: 1,
         slidesToScroll: 1,
-        variableWidth: true,
+        // variableWidth: true,
         prevArrow: $('.stage2 .box .left-arrow'),
         nextArrow: $('.stage2 .box .right-arrow')
-    
     });
 
     $('.stage3 .box .content').slick({
@@ -21,7 +20,7 @@ $(document).ready(function(){
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        variableWidth: true,
+        // variableWidth: true,
         speed: 300,
         prevArrow: $('.stage3 .box .left-arrow'),
         nextArrow: $('.stage3 .box .right-arrow')

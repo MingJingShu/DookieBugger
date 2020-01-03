@@ -8,6 +8,7 @@ let PagePos = [
     '.stage4',
     '.stage5'
 ];
+
 function GetPos()
 {
     PagePos[0] = $('.stage1').position().top;
@@ -273,6 +274,10 @@ $('.header ul li').each(function(index){
     });
 });
 //List Buttons
+
+//slide fixed
+$('.stage2 .box .content .p1,.stage2 .box .content .p2,.stage2 .box .content .p3').addClass('w100');
+
 
 
 

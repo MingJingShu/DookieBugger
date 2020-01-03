@@ -1622,18 +1622,20 @@ nav {
     display: none; }
   .stage2 .box {
     width: 546px;
-    height: 970px; }
+    height: 960px; }
     .stage2 .box .content .p1, .stage2 .box .content .p2, .stage2 .box .content .p3 {
-      width: 546px;
-      height: 970px;
-      background: url(../images/stage2/content2.png); }
+      width: 100%;
+      height: 960px;
+      background: url(../images/stage2/content0.png);
+      border: 5px solid white; }
   .stage2 .title {
     margin-bottom: 50 px; }
   .stage3 .box {
     width: 546px; }
     .stage3 .box .content .p1, .stage3 .box .content .p2, .stage3 .box .content .p3 {
       width: 546px;
-      background: url(../images/stage3/content2.png); }
+      background: url(../images/stage3/content0.png);
+      border: 5px solid white; }
   .stage3 .about-us {
     width: 546px; }
   .stage3 h1 {
@@ -1675,6 +1677,12 @@ nav {
     height: 54px;
     background: url(../images/stage2/title2.png) no-repeat;
     margin-bottom: 0; }
+  .stage2 .box {
+    width: 100%; }
+  .stage2 .content {
+    width: 100%; }
+  .stage2 .box .content .p1, .stage2 .box .content .p2, .stage2 .box .content .p3 {
+    background-size: cover; }
   .stage3 {
     height: 1530px; }
   .stage3 .title {
