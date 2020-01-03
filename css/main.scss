@@ -582,7 +582,7 @@ h1{
     main{height: 7500px;}
     .stage1{
       .text1{top: -45%; left: -7%; opacity: 0;}
-      .bugger{max-width: 535px; max-height: 457px;     left: 9%; /*width: 80%;*/
+      .bugger{max-width: 535px; max-height: 457px;     left: 0%; /*width: 80%;*/
         background: url(../images/stage1/main.png) -636px 0; /*background-position: top center;*/
         animation: stage1-bu2 2s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards;
         }//bugger
@@ -618,8 +618,11 @@ h1{
 
   }//830
 
-  @media screen and (max-width:767px){
+  @media screen and (max-width:768px) and(min-width:767px){
     html{width: 100%;}
+    .stage1 .text1{left: 0%;}
+    .stage1 .bugger{left: 15%;}
+    .stage1 .bugger-s{left: 15%;}
     // .container{width: 594px;}
     // .dark-bg{width: 594px;}
     // .stage1 .bugger{left: 27%;}
@@ -639,7 +642,7 @@ h1{
   // main{width: 108%;}
   main{width: 100%;}
   h1{font-size: 2rem;}
-  .stage1 .text1{left: -5%;}
+  .stage1 .text1{left: 1%;}
   // .stage1 .bugger{    width: 100%; height: 41%; left: 0; top: 50%; background-position: left top; animation: stage1-bu-s 2s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards;}
   .stage2{   height: 1065px;}
   // .stage2 .box{width: 100%;}

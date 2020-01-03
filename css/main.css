@@ -1612,7 +1612,7 @@ nav {
   .stage1 .bugger {
     max-width: 535px;
     max-height: 457px;
-    left: 9%;
+    left: 0%;
     /*width: 80%;*/
     background: url(../images/stage1/main.png) -636px 0;
     /*background-position: top center;*/
@@ -1664,9 +1664,15 @@ nav {
   .BG {
     height: 7674px; } }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) and (min-width: 767px) {
   html {
-    width: 100%; } }
+    width: 100%; }
+  .stage1 .text1 {
+    left: 0%; }
+  .stage1 .bugger {
+    left: 15%; }
+  .stage1 .bugger-s {
+    left: 15%; } }
 
 @media screen and (max-width: 414px) and (min-width: 300px) {
   html {
@@ -1676,7 +1682,7 @@ nav {
   h1 {
     font-size: 2rem; }
   .stage1 .text1 {
-    left: -5%; }
+    left: 1%; }
   .stage2 {
     height: 1065px; }
   .stage2 .title {
