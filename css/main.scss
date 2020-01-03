@@ -622,7 +622,7 @@ h1{
     html{width: 100%;}
     .stage1 .text1{left: 0%;}
     .stage1 .bugger{left: 15%;}
-    .stage1 .bugger-s{left: 15%;}
+    .stage1 .bugger-s{left: 15%; top: 83%;}
     // .container{width: 594px;}
     // .dark-bg{width: 594px;}
     // .stage1 .bugger{left: 27%;}
@@ -644,6 +644,10 @@ h1{
   h1{font-size: 2rem;}
   .stage1 .text1{left: 1%;}
   // .stage1 .bugger{    width: 100%; height: 41%; left: 0; top: 50%; background-position: left top; animation: stage1-bu-s 2s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards;}
+  .stage1 .bugger{ width: 360px; height: 300px; background: url(../images/stage1/hamburger.png); left: 9%; animation: stage1-bu2 2s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards;
+  .text1{left: 15%; top: -40%; background: url(../images/stage1/atext.png)no-repeat; width: 208px; height: 79px;}
+  }//bugger
+  .stage1 .bugger-s{left: -15%; top: 68%;}
   .stage2{   height: 1065px;}
   // .stage2 .box{width: 100%;}
   .stage2 .title{ width: 302px; height: 54px;background: url(../images/stage2/titles.png) 0px -0px;; margin-bottom: 0;}

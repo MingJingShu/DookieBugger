@@ -46,19 +46,19 @@
   0% {
     top: -85%; }
   80% {
-    top: 27%;
+    top: 42%;
     -webkit-transform: scaleX(1);
     transform: scaleX(1); }
   90% {
-    top: 33%;
+    top: 48%;
     -webkit-transform: scaleX(1.2) scaleY(0.8);
     transform: scaleX(1.2) scaleY(0.8); }
   95% {
-    top: 20%;
+    top: 36%;
     -webkit-transform: scaleX(1) scaleY(1.2);
     transform: scaleX(1) scaleY(1.2); }
   100% {
-    top: 27%;
+    top: 42%;
     -webkit-transform: scaleX(1) scaleY(1);
     transform: scaleX(1) scaleY(1); } }
 
@@ -66,19 +66,19 @@
   0% {
     top: -85%; }
   80% {
-    top: 27%;
+    top: 42%;
     -webkit-transform: scaleX(1);
     transform: scaleX(1); }
   90% {
-    top: 33%;
+    top: 48%;
     -webkit-transform: scaleX(1.2) scaleY(0.8);
     transform: scaleX(1.2) scaleY(0.8); }
   95% {
-    top: 20%;
+    top: 36%;
     -webkit-transform: scaleX(1) scaleY(1.2);
     transform: scaleX(1) scaleY(1.2); }
   100% {
-    top: 27%;
+    top: 42%;
     -webkit-transform: scaleX(1) scaleY(1);
     transform: scaleX(1) scaleY(1); } }
 
@@ -1672,7 +1672,8 @@ nav {
   .stage1 .bugger {
     left: 15%; }
   .stage1 .bugger-s {
-    left: 15%; } }
+    left: 15%;
+    top: 83%; } }
 
 @media screen and (max-width: 414px) and (min-width: 300px) {
   html {
@@ -1683,6 +1684,22 @@ nav {
     font-size: 2rem; }
   .stage1 .text1 {
     left: 1%; }
+  .stage1 .bugger {
+    width: 360px;
+    height: 300px;
+    background: url(../images/stage1/hamburger.png);
+    left: 9%;
+    -webkit-animation: stage1-bu2 2s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards;
+    animation: stage1-bu2 2s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards; }
+    .stage1 .bugger .text1 {
+      left: 15%;
+      top: -40%;
+      background: url(../images/stage1/atext.png) no-repeat;
+      width: 208px;
+      height: 79px; }
+  .stage1 .bugger-s {
+    left: -15%;
+    top: 68%; }
   .stage2 {
     height: 1065px; }
   .stage2 .title {
