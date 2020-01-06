@@ -2,20 +2,20 @@ $(document).ready(function(){
     console.log("hello This is {Pony all.js}");
 
 let PagePos = [
-    '.stage1',
-    '.stage2',
-    '.stage3',
-    '.stage4',
-    '.stage5'
+    '.main',
+    '.menu',
+    '.about',
+    '.address',
+    '.blog'
 ];
 
 function GetPos()
 {
-    PagePos[0] = $('.stage1').position().top;
-    PagePos[1] = $('.stage2').position().top;
-    PagePos[2] = $('.stage3').position().top;
-    PagePos[3] = $('.stage4').position().top;
-    PagePos[4] = $('.stage5').position().top;
+    PagePos[0] = $('.main').position().top;
+    PagePos[1] = $('.menu').position().top;
+    PagePos[2] = $('.about').position().top;
+    PagePos[3] = $('.address').position().top;
+    PagePos[4] = $('.blog').position().top;
     for(let i = 0;i<PagePos.length ;i++)
     {/*console.log('PagePos['+i+'] = {'+PagePos[i]+'}')*/}
 }
@@ -115,121 +115,121 @@ $(window).scroll(function(){
     if(bodyval < 1094)
     {   $(Points[0]).siblings().removeClass('L-start')
         $(Points[0]).addClass('L-start')
-        $('.stage1').siblings().removeClass('stage-act');
+        $('main').siblings().removeClass('stage-act');
     }
     
      if(bodyval >= 800 && bodyval <1969)
     {   $(Points[1]).siblings().removeClass('L-start')
         $(Points[1]).addClass('L-start');
-        // $('.stage2').siblings().removeClass('stage-act');
-        $('.stage2').addClass('stage-act');
+        // $('menu').siblings().removeClass('stage-act');
+        $('.menu').addClass('stage-act');
         console.log('stage2');
-    }//stage2
+    }//menu
     if(bodyval >= 1969 && bodyval <3774)
     {   $(Points[2]).siblings().removeClass('L-start')
         $(Points[2]).addClass('L-start')
-        // $('.stage3').siblings().removeClass('stage-act');
-        $('.stage3').addClass('stage-act');
-        $('.stage3 .about-us ,.stage3 .about-us p:nth-child(2),.stage3 .about-us p:nth-child(3),.stage3 .about-us p:nth-child(4),.stage3 .about-us p:nth-child(5)')
+        // $('.about').siblings().removeClass('stage-act');
+        $('.about').addClass('stage-act');
+        $('.about .about-us ,.about .about-us p:nth-child(2),.about .about-us p:nth-child(3),.about .about-us p:nth-child(4),.about .about-us p:nth-child(5)')
         .removeClass('stage-act');
-        // $('.stage3 .about-us p:nth-child(2)').removeClass('stage-act');
-        // $('.stage3 .about-us p:nth-child(3)').removeClass('stage-act');
-        console.log('stage3');
-    }//stage3
+        // $('.about .about-us p:nth-child(2)').removeClass('stage-act');
+        // $('.about .about-us p:nth-child(3)').removeClass('stage-act');
+        console.log('about');
+    }//about
     if(bodyval >= 2649 && bodyval <3774)
     {
-        $('.stage3 .about-us').addClass('stage-act');
-        console.log('stage3.5');
+        $('.about .about-us').addClass('stage-act');
+        console.log('about.5');
     }//3.5
     if(bodyval >= 2749 && bodyval <3774)
     {
-        $('.stage3 .about-us p:nth-child(2)').addClass('stage-act');
-        console.log('stage3.6');
+        $('.about .about-us p:nth-child(2)').addClass('stage-act');
+        console.log('about.6');
     }//3.6
     if(bodyval >= 2849 && bodyval <3774)
     {
-        $('.stage3 .about-us p:nth-child(3)').addClass('stage-act');
-        console.log('stage3.7');
+        $('.about .about-us p:nth-child(3)').addClass('stage-act');
+        console.log('about.7');
     }//3.7
     if(bodyval >= 2949 && bodyval <3774)
     {
-        $('.stage3 .about-us p:nth-child(4)').addClass('stage-act');
-        console.log('stage3.8');
+        $('.about .about-us p:nth-child(4)').addClass('stage-act');
+        console.log('about.8');
     }//3.8
     if(bodyval >= 3249 && bodyval <3774)
     {
-        $('.stage3 .about-us p:nth-child(5)').addClass('stage-act');
-        console.log('stage3.9');
+        $('.about .about-us p:nth-child(5)').addClass('stage-act');
+        console.log('about.9');
     }//3.9
 
      if(bodyval >= 3569 && bodyval <4454)
     {   $(Points[3]).siblings().removeClass('L-start')
         $(Points[3]).addClass('L-start')
-        // $('.stage4').siblings().removeClass('stage-act');
-        $('.stage4').addClass('stage-act');
-        $('.stage4 .box .subtitle').addClass('stage-act');
-        $('.stage4 .box .content ,.stage4 .box .subtitle,.stage4 .box .map').removeClass('stage-act');
-        console.log('stage4');
-    }//stage4
+        // $('.address').siblings().removeClass('stage-act');
+        $('.address').addClass('stage-act');
+        $('.address .box .subtitle').addClass('stage-act');
+        $('.address .box .content ,.address .box .subtitle,.address .box .map').removeClass('stage-act');
+        console.log('address');
+    }//address
     if(bodyval >= 3669 && bodyval <4454)
     {
-        $('.stage4 .box .subtitle').addClass('stage-act');
-        console.log('stage4.1');
+        $('.address .box .subtitle').addClass('stage-act');
+        console.log('address.1');
     }//4.1
     if(bodyval >= 3729 && bodyval <4454)
     {
-        $('.stage4 .box .content').addClass('stage-act');
-        console.log('stage4.2');
+        $('.address .box .content').addClass('stage-act');
+        console.log('address.2');
     }//4.2
     if(bodyval >= 3829 && bodyval <4454)
     {
-        $('.stage4 .box .map').addClass('stage-act');
-        $('.stage5').removeClass('stage-act');
-        console.log('stage4.3');
+        $('.address .box .map').addClass('stage-act');
+        $('.blog').removeClass('stage-act');
+        console.log('address.3');
     }
      if(bodyval >= 4400 && bodyval <7000)
     {   $(Points[4]).siblings().removeClass('L-start')
         $(Points[4]).addClass('L-start')
-        // $('.stage5').siblings().removeClass('stage-act');
-        $('.stage5').addClass('stage-act');
-        $('.stage5 .box .item:nth-child(1),.stage5 .box .item:nth-child(2),.stage5 .box .item:nth-child(3),.stage5 .box .item:nth-child(4), .stage5 .box .item:nth-child(5),.stage5 .box .item:nth-child(6)')
+        // $('.blog').siblings().removeClass('stage-act');
+        $('.blog').addClass('stage-act');
+        $('.blog .box .item:nth-child(1),.blog .box .item:nth-child(2),.blog .box .item:nth-child(3),.blog .box .item:nth-child(4), .blog .box .item:nth-child(5),.blog .box .item:nth-child(6)')
         .removeClass('stage-act');
-        console.log('stage5');
-    }//stage5 4454 width<764  origin4568
+        console.log('blog');
+    }//blog 4454 width<764  origin4568
     if(bodyval >= 4615 && bodyval <7000)
     {
-        $('.stage5 .box .item:nth-child(1)').addClass('stage-act');
-        console.log('stage5.1');
+        $('.blog .box .item:nth-child(1)').addClass('stage-act');
+        console.log('blog.1');
     }
     if(bodyval >= 5014 && bodyval <7000)
     {
-        $('.stage5 .box .item:nth-child(2)').addClass('stage-act');
-        console.log('stage5.2');
+        $('.blog .box .item:nth-child(2)').addClass('stage-act');
+        console.log('blog.2');
     }
     if(bodyval >= 5472 && bodyval <7000)
     {
-        $('.stage5 .box .item:nth-child(3)').addClass('stage-act');
-        console.log('stage5.3');
+        $('.blog .box .item:nth-child(3)').addClass('stage-act');
+        console.log('blog.3');
     }
     if(bodyval >= 5805 && bodyval <7000)
     {
-        $('.stage5 .box .item:nth-child(4)').addClass('stage-act');
-        console.log('stage5.4');
+        $('.blog .box .item:nth-child(4)').addClass('stage-act');
+        console.log('blog.4');
     }
     if(bodyval >= 6250 && bodyval <7000)
     {
-        $('.stage5 .box .item:nth-child(5)').addClass('stage-act');
-        console.log('stage5.5');
+        $('.blog .box .item:nth-child(5)').addClass('stage-act');
+        console.log('blog.5');
     }
     if(bodyval >= 6700 && bodyval <7000)
     {
-        $('.stage5 .box .item:nth-child(6)').addClass('stage-act');
-        console.log('stage5.6');
+        $('.blog .box .item:nth-child(6)').addClass('stage-act');
+        console.log('blog.6');
     }
 
     // console.log('scroll val ={'+scrollval+"}");
     // console.log('posmain val ={'+posmain.top+"}");
-    // $('.stage3 .about-us ,.stage3 .about-us p:nth-child(2),.stage3 .about-us p:nth-child(3),.stage3 .about-us p:nth-child(4),.stage3 .about-us p:nth-child(5)')
+    // $('.about .about-us ,.about .about-us p:nth-child(2),.about .about-us p:nth-child(3),.about .about-us p:nth-child(4),.about .about-us p:nth-child(5)')
     //.removeClass('stage-act');
 });//window
 
@@ -276,7 +276,7 @@ $('.header ul li').each(function(index){
 //List Buttons
 
 //slide fixed
-$('.stage2 .box .content .p1,.stage2 .box .content .p2,.stage2 .box .content .p3').addClass('w100');
+$('.menu .box .content .p1,.menu .box .content .p2,.menu .box .content .p3').addClass('w100');
 
 
 
