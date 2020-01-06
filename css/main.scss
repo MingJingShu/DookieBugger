@@ -620,6 +620,7 @@ h1{
   }//830
 
   @media screen and (max-width:768px) and(min-width:767px){
+    
     html{width: 100%;}
     .main .text1{left: 0%;}
     .main .bugger{left: 15%;}
@@ -643,6 +644,9 @@ h1{
   // main{width: 108%;}
   main{width: 100%;}
   h1{font-size: 2rem;}
+
+
+  .main{margin-top: -190px;}
   .main .text1{left: 1%;}
   // .main .bugger{    width: 100%; height: 41%; left: 0; top: 50%; background-position: left top; animation: stage1-bu-s 2s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards;}
   .main .bugger{ width: 360px; height: 300px; background: url(../images/main/mains.png) -0 -325px; left: 9%; animation: stage1-bu2 2s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards;
@@ -684,7 +688,7 @@ h1{
   .right-link{right: -20px;}
   }//nav
   .header{width: inherit; left: 0; transform: translateX(0);}
-  .BG{height: 7615px}//7500
+  .BG{height: 7712px; margin-top:-190px;}//7500
 }
 /*bootstrapt
 @media (max-width: 767px) {
