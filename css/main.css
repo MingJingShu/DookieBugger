@@ -1717,6 +1717,7 @@ nav {
   .menu .content {
     width: 100%; }
   .menu .box .content .p1, .menu .box .content .p2, .menu .box .content .p3 {
+    background: url(../images/menu/content360.jpg);
     background-size: cover; }
   .about {
     height: 1620px; }
