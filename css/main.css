@@ -1696,11 +1696,12 @@ nav {
     -webkit-animation: stage1-bu2 2s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards;
     animation: stage1-bu2 2s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards; }
     .main .bugger .text1 {
-      left: 15%;
-      top: -40%;
-      background: url(../images/main/texts.png) 0 -196px;
-      width: 208px;
-      height: 79px; }
+      left: -7.5%;
+      top: -60%;
+      background: url(../images/main/texts.png) 0 -275px;
+      /*0 -196px w298 h156 w208 h79*/
+      width: 298px;
+      height: 156px; }
   .main .bugger-s {
     left: -15%;
     top: 68%; }

@@ -650,7 +650,7 @@ h1{
   .main .text1{left: 1%;}
   // .main .bugger{    width: 100%; height: 41%; left: 0; top: 50%; background-position: left top; animation: stage1-bu-s 2s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards;}
   .main .bugger{ width: 360px; height: 300px; background: url(../images/main/mains.png) -0 -325px; left: 9%; animation: stage1-bu2 2s 1 cubic-bezier(0.85, 1.09, 1, 1) forwards;
-  .text1{left: 15%; top: -40%; background: url(../images/main/texts.png) -0 -196px; width: 208px; height: 79px;}
+  .text1{left: -7.5%; top: -60%; background: url(../images/main/texts.png)  0 -275px;/*0 -196px w298 h156 w208 h79*/ width: 298px; height: 156px;}
   }//bugger
   .main .bugger-s{left: -15%; top: 68%;}
   .menu{   height: 1065px;}
