@@ -1024,18 +1024,23 @@ nav {
       width: 788px;
       height: 970px;
       position: relative; }
-      .menu .box .content .p1, .menu .box .content .p2, .menu .box .content .p3 {
+      .menu .box .content .p1, .menu .box .content .p2, .menu .box .content .p3, .menu .box .content .p4, .menu .box .content .p5, .menu .box .content .p6, .menu .box .content .p7, .menu .box .content .p8, .menu .box .content .p9, .menu .box .content .p10 {
         position: relative;
         cursor: pointer;
         width: 788px;
-        height: 975px; }
-      .menu .box .content .p1 {
-        background: url(../images/menu/content.png) no-repeat; }
-      .menu .box .content .p2 {
-        background: url(../images/menu/content.png) no-repeat; }
-      .menu .box .content .p3 {
-        background: url(../images/menu/content.png) no-repeat; }
-      .menu .box .content .p1, .menu .box .content .p2, .menu .box .content .p3 {
+        height: 975px;
+        border: 5px solid white; }
+      .menu .box .content .p1, .menu .box .content .p6 {
+        background: url(../images/menu/p1.png) no-repeat; }
+      .menu .box .content .p2, .menu .box .content .p7 {
+        background: url(../images/menu/p2.png) no-repeat; }
+      .menu .box .content .p3, .menu .box .content .p8 {
+        background: url(../images/menu/p3.png) no-repeat; }
+      .menu .box .content .p4, .menu .box .content .p9 {
+        background: url(../images/menu/p4.png) no-repeat; }
+      .menu .box .content .p5, .menu .box .content .p10 {
+        background: url(../images/menu/p5.png) no-repeat; }
+      .menu .box .content div {
         background-size: cover; }
     .menu .box .left-arrow, .menu .box .right-arrow {
       background: url(../images/menu/arrows.png) no-repeat;
@@ -1630,13 +1635,23 @@ nav {
   nav .right-link {
     display: none; }
   .menu .box {
-    width: 546px;
+    width: 640px;
     height: 960px; }
-    .menu .box .content .p1, .menu .box .content .p2, .menu .box .content .p3 {
+    .menu .box .content .p1, .menu .box .content .p2, .menu .box .content .p3, .menu .box .content .p4, .menu .box .content .p5, .menu .box .content .p6, .menu .box .content .p7, .menu .box .content .p8, .menu .box .content .p9, .menu .box .content .p10 {
       width: 100%;
       height: 960px;
-      background: url(../images/menu/content0.png);
-      border: 5px solid white; }
+      border: 5px solid white;
+      background: url(../images/menu/640-p1.png); }
+    .menu .box .content .p1, .menu .box .content .p6 {
+      background: url(../images/menu/640-p1.png) no-repeat; }
+    .menu .box .content .p2, .menu .box .content .p7 {
+      background: url(../images/menu/640-p2.png) no-repeat; }
+    .menu .box .content .p3, .menu .box .content .p8 {
+      background: url(../images/menu/640-p3.png) no-repeat; }
+    .menu .box .content .p4, .menu .box .content .p9 {
+      background: url(../images/menu/640-p4.png) no-repeat; }
+    .menu .box .content .p5, .menu .box .content .p10 {
+      background: url(../images/menu/640-p5.png) no-repeat; }
   .menu .title {
     margin-bottom: 50 px; }
   .about .box {
@@ -1716,8 +1731,27 @@ nav {
     width: 100%; }
   .menu .content {
     width: 100%; }
-  .menu .box .content .p1, .menu .box .content .p2, .menu .box .content .p3 {
-    background: url(../images/menu/content360.jpg);
+  .menu .box .content .p1 {
+    background: url(../images/menu/320-p1.png) no-repeat; }
+  .menu .box .content .p2 {
+    background: url(../images/menu/320-p2.png) no-repeat; }
+  .menu .box .content .p3 {
+    background: url(../images/menu/320-p3.png) no-repeat; }
+  .menu .box .content .p4 {
+    background: url(../images/menu/320-p4.png) no-repeat; }
+  .menu .box .content .p5 {
+    background: url(../images/menu/320-p5.png) no-repeat; }
+  .menu .box .content .p6 {
+    background: url(../images/menu/320-p6.png) no-repeat; }
+  .menu .box .content .p7 {
+    background: url(../images/menu/320-p7.png) no-repeat; }
+  .menu .box .content .p8 {
+    background: url(../images/menu/320-p8.png) no-repeat; }
+  .menu .box .content .p9 {
+    background: url(../images/menu/320-p9.png) no-repeat; }
+  .menu .box .content .p10 {
+    background: url(../images/menu/320-p10.png) no-repeat; }
+  .menu .box .content .p1, .menu .box .content .p2, .menu .box .content .p3, .menu .box .content .p4, .menu .box .content .p5, .menu .box .content .p6, .menu .box .content .p7, .menu .box .content .p8, .menu .box .content .p9, .menu .box .content .p10 {
     background-size: cover; }
   .about {
     height: 1620px; }
